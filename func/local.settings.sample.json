@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "AzureSignalRConnectionString": "Endpoint=https://jamb.service.signalr.net;AccessKey=0YTjnwZf7rrRVqLPMI2CnzFKBhC+EXY7KfyY79OcRH4=;Version=1.0;"
+  },
+  "Host": {
+    "LocalHttpPort": 7071,
+    "CORS": "http://localhost:8080,https://azure-samples.github.io",
+    "CORSCredentials": true
+  }
+}
