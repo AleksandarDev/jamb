@@ -6,7 +6,7 @@
   },
   "Host": {
     "LocalHttpPort": 7071,
-    "CORS": "http://localhost:3000,https://jamb.now.io",
+    "CORS": "http://localhost:3000,https://jamb.now.sh/",
     "CORSCredentials": true
   }
 }
