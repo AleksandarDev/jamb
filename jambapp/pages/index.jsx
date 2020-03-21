@@ -9,7 +9,7 @@ const apiBaseUrl = "https://jamb.azurewebsites.net";
 
 const Index = () => {
   const [isReady, setIsReady] = useState(false);
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState(new Array());
   const [newMessageText, setNewMessageText] = useState('');
 
   const sendMessageClick = () => {
@@ -26,7 +26,8 @@ const Index = () => {
   let counter = 0;
   function newMessage(message) {
     message.id = counter++; // vue transitions need an id
-    setMessages(messages.unshift(message));
+    messages.unshift(message);
+    setMessages([...messages]);
   }
 
   useEffect(() => {
@@ -46,7 +47,7 @@ const Index = () => {
   return (
     <div>
       <h1>Jamb</h1>
-      <div>{isReady ? "Spajanje..." : "Spojen"}</div>
+      <div>{isReady ? "Spojen" : "Spajanje..."}</div>
       <div>
         <input value={newMessageText} onChange={(e) => setNewMessageText(e.target.value)} />
         <button onClick={() => sendMessageClick()}>Salji</button>

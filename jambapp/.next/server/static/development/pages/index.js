@@ -123,7 +123,7 @@ const Index = () => {
   const {
     0: messages,
     1: setMessages
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(new Array());
   const {
     0: newMessageText,
     1: setNewMessageText
@@ -145,7 +145,8 @@ const Index = () => {
   function newMessage(message) {
     message.id = counter++; // vue transitions need an id
 
-    setMessages(messages.unshift(message));
+    messages.unshift(message);
+    setMessages([...messages]);
   }
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
@@ -161,28 +162,28 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 48,
       columnNumber: 5
     }
   }, __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 49,
       columnNumber: 7
     }
   }, "Jamb"), __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 50,
       columnNumber: 7
     }
-  }, isReady ? "Spajanje..." : "Spojen"), __jsx("div", {
+  }, isReady ? "Spojen" : "Spajanje..."), __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 51,
       columnNumber: 7
     }
   }, __jsx("input", {
@@ -191,7 +192,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 52,
       columnNumber: 9
     }
   }), __jsx("button", {
@@ -199,21 +200,21 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 53,
       columnNumber: 9
     }
   }, "Salji")), __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 55,
       columnNumber: 7
     }
   }, messages.map(message => __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 57,
       columnNumber: 11
     }
   }, "(", message.id, ") ", message.text))));
