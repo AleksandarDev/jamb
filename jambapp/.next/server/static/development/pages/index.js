@@ -104,62 +104,119 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/Users/aleksandartoplek/Documents/jamb/jambapp/pages/index.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 const data = {
   userName: "userName"
 };
 const apiBaseUrl = "https://jamb.azurewebsites.net";
 
-function sendMessage(sender, messageText) {
-  return axios.post(`${apiBaseUrl}/api/messages`, {
-    sender: sender,
-    text: messageText
-  }).then(resp => resp.data);
-}
-
-let counter = 0;
-
-function newMessage(message) {
-  message.id = counter++; // vue transitions need an id
-
-  data.messages.unshift(message);
-}
-
 const Index = () => {
   const {
     0: isReady,
     1: setIsReady
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const {
+    0: messages,
+    1: setMessages
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
+  const {
+    0: newMessageText,
+    1: setNewMessageText
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+
+  const sendMessageClick = () => {
+    sendMessage(data.userName, newMessageText);
+  };
+
+  function sendMessage(sender, messageText) {
+    return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post(`${apiBaseUrl}/api/messages`, {
+      sender: sender,
+      text: messageText
+    }).then(resp => resp.data);
+  }
+
+  let counter = 0;
+
+  function newMessage(message) {
+    message.id = counter++; // vue transitions need an id
+
+    setMessages(messages.unshift(message));
+  }
+
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     const connection = new window.signalR.HubConnectionBuilder().withUrl(`${apiBaseUrl}/api`).configureLogging(window.signalR.LogLevel.Information).build();
     connection.on('newMessage', newMessage);
     connection.onclose(() => console.log('disconnected'));
-    connection.start().then(() => setIsReady(true)).catch(console.error);
+    connection.start().then(() => setIsReady(true)).catch(err => {
+      console.error(err);
+      setIsReady(false);
+    });
   }, []);
   return __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 47,
       columnNumber: 5
     }
   }, __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 48,
       columnNumber: 7
     }
   }, "Jamb"), __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 49,
       columnNumber: 7
     }
-  }, isReady ? "Spajanje..." : "Spojen"));
+  }, isReady ? "Spajanje..." : "Spojen"), __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50,
+      columnNumber: 7
+    }
+  }, __jsx("input", {
+    value: newMessageText,
+    onChange: e => setNewMessageText(e.target.value),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51,
+      columnNumber: 9
+    }
+  }), __jsx("button", {
+    onClick: () => sendMessageClick(),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52,
+      columnNumber: 9
+    }
+  }, "Salji")), __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54,
+      columnNumber: 7
+    }
+  }, messages.map(message => __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56,
+      columnNumber: 11
+    }
+  }, "(", message.id, ") ", message.text))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
@@ -175,6 +232,17 @@ const Index = () => {
 
 module.exports = __webpack_require__(/*! /Users/aleksandartoplek/Documents/jamb/jambapp/pages/index.jsx */"./pages/index.jsx");
 
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
 
 /***/ }),
 

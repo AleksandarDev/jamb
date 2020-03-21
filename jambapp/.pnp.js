@@ -138,6 +138,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["axios", "npm:0.19.2"],
             ["next", "virtual:be83fb207ab73b497e4bed4d748a513032dbcdc28a7e990adc4449a345138aea5e241e23c62c9a57f2cfe76082241ef23f61239d570c0f88b22199edd86dabba#npm:9.3.1"],
             ["react", "npm:16.13.1"],
             ["react-dom", "virtual:be83fb207ab73b497e4bed4d748a513032dbcdc28a7e990adc4449a345138aea5e241e23c62c9a57f2cfe76082241ef23f61239d570c0f88b22199edd86dabba#npm:16.13.1"]
@@ -2327,6 +2328,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"
         }]
       ]],
+      ["axios", [
+        ["npm:0.19.2", {
+          "packageLocation": "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/",
+          "packageDependencies": [
+            ["axios", "npm:0.19.2"],
+            ["follow-redirects", "npm:1.5.10"]
+          ],
+          "linkType": "HARD"
+        }]
+      ]],
       ["babel-code-frame", [
         ["npm:6.26.0", {
           "packageLocation": "./.yarn/cache/babel-code-frame-npm-6.26.0-9f86717636-1.zip/node_modules/babel-code-frame/",
@@ -3502,6 +3513,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD"
         }],
+        ["npm:3.1.0", {
+          "packageLocation": "./.yarn/cache/debug-npm-3.1.0-9f0accb99b-1.zip/node_modules/debug/",
+          "packageDependencies": [
+            ["debug", "npm:3.1.0"],
+            ["ms", "npm:2.0.0"]
+          ],
+          "linkType": "HARD"
+        }],
         ["npm:3.2.6", {
           "packageLocation": "./.yarn/cache/debug-npm-3.2.6-6214e40f12-1.zip/node_modules/debug/",
           "packageDependencies": [
@@ -4284,6 +4303,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["follow-redirects", "npm:1.10.0"],
             ["debug", "npm:3.2.6"]
+          ],
+          "linkType": "HARD"
+        }],
+        ["npm:1.5.10", {
+          "packageLocation": "./.yarn/cache/follow-redirects-npm-1.5.10-bde6f43576-1.zip/node_modules/follow-redirects/",
+          "packageDependencies": [
+            ["follow-redirects", "npm:1.5.10"],
+            ["debug", "npm:3.1.0"]
           ],
           "linkType": "HARD"
         }]
@@ -5271,6 +5298,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["jambapp", "workspace:."],
+            ["axios", "npm:0.19.2"],
             ["next", "virtual:be83fb207ab73b497e4bed4d748a513032dbcdc28a7e990adc4449a345138aea5e241e23c62c9a57f2cfe76082241ef23f61239d570c0f88b22199edd86dabba#npm:9.3.1"],
             ["react", "npm:16.13.1"],
             ["react-dom", "virtual:be83fb207ab73b497e4bed4d748a513032dbcdc28a7e990adc4449a345138aea5e241e23c62c9a57f2cfe76082241ef23f61239d570c0f88b22199edd86dabba#npm:16.13.1"]
