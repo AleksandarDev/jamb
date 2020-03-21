@@ -6,7 +6,7 @@
   },
   "Host": {
     "LocalHttpPort": 7071,
-    "CORS": "http://localhost:8080,https://azure-samples.github.io",
+    "CORS": "http://localhost:3000,https://jamb.now.io",
     "CORSCredentials": true
   }
 }
