@@ -1794,7 +1794,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var Dice = function Dice(props) {
   var value = props.value,
       isSelected = props.isSelected;
-  var diceValueStyle = null;
+  var diceValueStyle = _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceValue0;
 
   switch (value) {
     case 1:
@@ -1944,19 +1944,19 @@ function getRandomInt(max) {
 
 var DiceSet = function DiceSet(props) {
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([{
-    value: 1,
+    value: 0,
     isSelected: false
   }, {
-    value: 1,
+    value: 0,
     isSelected: false
   }, {
-    value: 1,
+    value: 0,
     isSelected: false
   }, {
-    value: 1,
+    value: 0,
     isSelected: false
   }, {
-    value: 1,
+    value: 0,
     isSelected: false
   }]),
       diceValues = _useState[0],
@@ -1988,8 +1988,10 @@ var DiceSet = function DiceSet(props) {
     setDiceValues(Object(_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(diceValues));
   };
 
-  return __jsx("div", {
-    className: _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_3___default.a.root,
+  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
+    container: true,
+    direction: "column",
+    spacing: 2,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -1997,9 +1999,7 @@ var DiceSet = function DiceSet(props) {
       columnNumber: 5
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
-    container: true,
-    direction: "column",
-    spacing: 2,
+    item: true,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
@@ -2007,32 +2007,27 @@ var DiceSet = function DiceSet(props) {
       columnNumber: 7
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
-    item: true,
+    container: true,
+    direction: "column",
+    alignItems: "center",
+    justify: "flex-start",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 58,
       columnNumber: 9
     }
-  }, __jsx("div", {
-    className: _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_3___default.a.dice,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59,
-      columnNumber: 11
-    }
   }, diceValues.map(function (diceValue, i) {
-    return __jsx("div", {
-      className: _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_3___default.a.diceContainer,
+    return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
+      item: true,
       onClick: function onClick() {
         return onDiceClick(i);
       },
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61,
-        columnNumber: 15
+        lineNumber: 65,
+        columnNumber: 13
       }
     }, __jsx(_Dice_Dice__WEBPACK_IMPORTED_MODULE_2__["default"], {
       key: "dice" + i,
@@ -2041,8 +2036,8 @@ var DiceSet = function DiceSet(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65,
-        columnNumber: 17
+        lineNumber: 66,
+        columnNumber: 15
       }
     }));
   }))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
@@ -2050,8 +2045,8 @@ var DiceSet = function DiceSet(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
-      columnNumber: 9
+      lineNumber: 75,
+      columnNumber: 7
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
     container: true,
@@ -2059,8 +2054,8 @@ var DiceSet = function DiceSet(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
-      columnNumber: 11
+      lineNumber: 76,
+      columnNumber: 9
     }
   }, Array(3).fill(1).map(function (item, i) {
     return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
@@ -2068,16 +2063,16 @@ var DiceSet = function DiceSet(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79,
-        columnNumber: 17
+        lineNumber: 80,
+        columnNumber: 15
       }
     }, __jsx("span", {
       className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__["default"])(_DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_3___default.a.throwIndicatorStep, throwCount > i && _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_3___default.a.throwIndicatorStepUsed),
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 80,
-        columnNumber: 19
+        lineNumber: 81,
+        columnNumber: 17
       }
     }, i + 1));
   }))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
@@ -2085,8 +2080,8 @@ var DiceSet = function DiceSet(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92,
-      columnNumber: 9
+      lineNumber: 93,
+      columnNumber: 7
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Button"], {
     variant: "contained",
@@ -2096,8 +2091,8 @@ var DiceSet = function DiceSet(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93,
-      columnNumber: 11
+      lineNumber: 94,
+      columnNumber: 9
     }
   }, __jsx("img", {
     src: "/static/throw.png",
@@ -2106,10 +2101,10 @@ var DiceSet = function DiceSet(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99,
-      columnNumber: 13
+      lineNumber: 100,
+      columnNumber: 11
     }
-  })))));
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (DiceSet);
@@ -43081,7 +43076,7 @@ function toVal(mix) {
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".Board_tableContainer__11JPn {\n  padding: 4px;\n  display: inline-block;\n}\n\n.Board_jambTable__2XNGH td {\n  width: 38px;\n  height: 38px;\n  padding: 2px;\n}\n.Board_jambTable__2XNGH .Board_score__36vPV {\n  width: 100%;\n  height: 100%;\n  background-color: #fff4f4;\n  font-size: 0.5em;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.Board_jambTable__2XNGH .Board_scoreLarge__1z0GB {\n  font-size: 1rem;\n}\n.Board_jambTable__2XNGH tr.Board_sum__3Cd39 td .Board_score__36vPV {\n  background-color: #ffc2c2;\n}", "",{"version":3,"sources":["Board.module.scss"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,qBAAA;AACF;;AAGE;EACE,WAAA;EACA,YAAA;EACA,YAAA;AAAJ;AAGE;EACE,WAAA;EACA,YAAA;EACA,yBAAA;EACA,gBAAA;EACA,kBAAA;EAEA,aAAA;EACA,uBAAA;EACA,mBAAA;AAFJ;AAKE;EACE,eAAA;AAHJ;AAME;EACE,yBAAA;AAJJ","file":"Board.module.scss","sourcesContent":[".tableContainer {\n  padding: 4px;\n  display: inline-block;\n}\n\n.jambTable {\n  td {\n    width: 38px;\n    height: 38px;\n    padding: 2px;\n  }\n\n  .score {\n    width: 100%;\n    height: 100%;\n    background-color: #fff4f4;\n    font-size: 0.5em;\n    text-align: center;\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .scoreLarge {\n    font-size: 1rem;\n  }\n\n  tr.sum td .score {\n    background-color: hsl(0, 100%, 88%);\n  }\n}\n"]}]);
+exports.push([module.i, ".Board_tableContainer__11JPn {\n  padding: 4px;\n  display: inline-block;\n}\n\n.Board_jambTable__2XNGH td {\n  width: 34px;\n  height: 34px;\n  padding: 1px;\n}\n.Board_jambTable__2XNGH .Board_score__36vPV {\n  width: 100%;\n  height: 100%;\n  background-color: #fff4f4;\n  font-size: 0.5em;\n  text-align: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.Board_jambTable__2XNGH .Board_scoreLarge__1z0GB {\n  font-size: 1rem;\n}\n.Board_jambTable__2XNGH tr.Board_sum__3Cd39 td .Board_score__36vPV {\n  background-color: #ffc2c2;\n}", "",{"version":3,"sources":["Board.module.scss"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,qBAAA;AACF;;AAGE;EACE,WAAA;EACA,YAAA;EACA,YAAA;AAAJ;AAGE;EACE,WAAA;EACA,YAAA;EACA,yBAAA;EACA,gBAAA;EACA,kBAAA;EAEA,aAAA;EACA,uBAAA;EACA,mBAAA;AAFJ;AAKE;EACE,eAAA;AAHJ;AAME;EACE,yBAAA;AAJJ","file":"Board.module.scss","sourcesContent":[".tableContainer {\n  padding: 4px;\n  display: inline-block;\n}\n\n.jambTable {\n  td {\n    width: 34px;\n    height: 34px;\n    padding: 1px;\n  }\n\n  .score {\n    width: 100%;\n    height: 100%;\n    background-color: #fff4f4;\n    font-size: 0.5em;\n    text-align: center;\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .scoreLarge {\n    font-size: 1rem;\n  }\n\n  tr.sum td .score {\n    background-color: hsl(0, 100%, 88%);\n  }\n}\n"]}]);
 // Exports
 exports.locals = {
 	"tableContainer": "Board_tableContainer__11JPn",
@@ -43121,12 +43116,13 @@ exports.locals = {
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".Dice_root__2XBSj {\n  display: inline-block;\n  width: 50px;\n  height: 50px;\n}\n\n.Dice_selectionContainer___RHmx {\n  padding: 4px;\n}\n\n.Dice_selected__3Y0D9 {\n  border: 2px dashed white;\n  padding: 2px;\n}\n\n.Dice_diceValue1__1QWIP {\n  background-image: url(\"/static/one.png\");\n}\n\n.Dice_diceValue2__1Rm4t {\n  background-image: url(\"/static/two.png\");\n}\n\n.Dice_diceValue3__2-R8d {\n  background-image: url(\"/static/three.png\");\n}\n\n.Dice_diceValue4__2PGHg {\n  background-image: url(\"/static/four.png\");\n}\n\n.Dice_diceValue5__2Y23A {\n  background-image: url(\"/static/five.png\");\n}\n\n.Dice_diceValue6__2NtPW {\n  background-image: url(\"/static/six.png\");\n}\n\n.Dice_diceValue__V4uRP {\n  background-size: 50px 50px;\n  background-repeat: no-repeat;\n}", "",{"version":3,"sources":["Dice.module.scss"],"names":[],"mappings":"AAEA;EACE,qBAAA;EACA,WAJS;EAKT,YALS;AAIX;;AAIA;EACE,YAAA;AADF;;AAIA;EACE,wBAAA;EACA,YAAA;AADF;;AAIA;EACE,wCAAA;AADF;;AAGA;EACE,wCAAA;AAAF;;AAEA;EACE,0CAAA;AACF;;AACA;EACE,yCAAA;AAEF;;AAAA;EACE,yCAAA;AAGF;;AADA;EACE,wCAAA;AAIF;;AADA;EACE,0BAAA;EACA,4BAAA;AAIF","file":"Dice.module.scss","sourcesContent":["$diceSize: 50px;\n\n.root {\n  display: inline-block;\n  width: $diceSize;\n  height: $diceSize;\n}\n\n.selectionContainer {\n  padding: 4px;\n}\n\n.selected {\n  border: 2px dashed white;\n  padding: 2px;\n}\n\n.diceValue1 {\n  background-image: url(\"/static/one.png\");\n}\n.diceValue2 {\n  background-image: url(\"/static/two.png\");\n}\n.diceValue3 {\n  background-image: url(\"/static/three.png\");\n}\n.diceValue4 {\n  background-image: url(\"/static/four.png\");\n}\n.diceValue5 {\n  background-image: url(\"/static/five.png\");\n}\n.diceValue6 {\n  background-image: url(\"/static/six.png\");\n}\n\n.diceValue {\n  background-size: $diceSize $diceSize;\n  background-repeat: no-repeat;\n}\n"]}]);
+exports.push([module.i, ".Dice_root__2XBSj {\n  display: inline-block;\n  width: 50px;\n  height: 50px;\n}\n\n.Dice_selectionContainer___RHmx {\n  padding: 4px;\n  display: flex;\n}\n\n.Dice_selected__3Y0D9 {\n  border: 2px dashed white;\n  border-radius: 4px;\n  padding: 2px;\n}\n\n.Dice_diceValue0__1C_xh {\n  background-image: url(\"/static/none.png\");\n}\n\n.Dice_diceValue1__1QWIP {\n  background-image: url(\"/static/one.png\");\n}\n\n.Dice_diceValue2__1Rm4t {\n  background-image: url(\"/static/two.png\");\n}\n\n.Dice_diceValue3__2-R8d {\n  background-image: url(\"/static/three.png\");\n}\n\n.Dice_diceValue4__2PGHg {\n  background-image: url(\"/static/four.png\");\n}\n\n.Dice_diceValue5__2Y23A {\n  background-image: url(\"/static/five.png\");\n}\n\n.Dice_diceValue6__2NtPW {\n  background-image: url(\"/static/six.png\");\n}\n\n.Dice_diceValue__V4uRP {\n  background-size: 50px 50px;\n  background-repeat: no-repeat;\n  height: 50px;\n}", "",{"version":3,"sources":["Dice.module.scss"],"names":[],"mappings":"AAEA;EACE,qBAAA;EACA,WAJS;EAKT,YALS;AAIX;;AAIA;EACE,YAAA;EACA,aAAA;AADF;;AAIA;EACE,wBAAA;EACA,kBAAA;EACA,YAAA;AADF;;AAIA;EACE,yCAAA;AADF;;AAGA;EACE,wCAAA;AAAF;;AAEA;EACE,wCAAA;AACF;;AACA;EACE,0CAAA;AAEF;;AAAA;EACE,yCAAA;AAGF;;AADA;EACE,yCAAA;AAIF;;AAFA;EACE,wCAAA;AAKF;;AAFA;EACE,0BAAA;EACA,4BAAA;EACA,YA5CS;AAiDX","file":"Dice.module.scss","sourcesContent":["$diceSize: 50px;\n\n.root {\n  display: inline-block;\n  width: $diceSize;\n  height: $diceSize;\n}\n\n.selectionContainer {\n  padding: 4px;\n  display: flex;\n}\n\n.selected {\n  border: 2px dashed white;\n  border-radius: 4px;\n  padding: 2px;\n}\n\n.diceValue0 {\n  background-image: url(\"/static/none.png\");\n}\n.diceValue1 {\n  background-image: url(\"/static/one.png\");\n}\n.diceValue2 {\n  background-image: url(\"/static/two.png\");\n}\n.diceValue3 {\n  background-image: url(\"/static/three.png\");\n}\n.diceValue4 {\n  background-image: url(\"/static/four.png\");\n}\n.diceValue5 {\n  background-image: url(\"/static/five.png\");\n}\n.diceValue6 {\n  background-image: url(\"/static/six.png\");\n}\n\n.diceValue {\n  background-size: $diceSize $diceSize;\n  background-repeat: no-repeat;\n  height: $diceSize;\n}\n"]}]);
 // Exports
 exports.locals = {
 	"root": "Dice_root__2XBSj",
 	"selectionContainer": "Dice_selectionContainer___RHmx",
 	"selected": "Dice_selected__3Y0D9",
+	"diceValue0": "Dice_diceValue0__1C_xh",
 	"diceValue1": "Dice_diceValue1__1QWIP",
 	"diceValue2": "Dice_diceValue2__1Rm4t",
 	"diceValue3": "Dice_diceValue3__2-R8d",
@@ -43147,11 +43143,9 @@ exports.locals = {
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".DiceSet_root__1IzrT {\n  padding: 4px;\n}\n\n.DiceSet_diceContainer__2F8Z6 {\n  padding: 4px;\n}\n\n.DiceSet_throwIndicatorStep__zENPt {\n  border: 1px solid rgba(0, 0, 0, 0.4);\n  width: 16px;\n  height: 16px;\n  border-radius: 8px;\n  display: inline-block;\n  font-size: 0.7rem;\n  text-align: center;\n  background-color: #efefef;\n}\n\n.DiceSet_throwIndicatorStepUsed__UcVBH {\n  background-color: rgba(255, 255, 255, 0.3);\n}", "",{"version":3,"sources":["DiceSet.module.scss"],"names":[],"mappings":"AAAA;EACE,YAAA;AACF;;AAEA;EACE,YAAA;AACF;;AAEA;EACE,oCAAA;EACA,WAAA;EACA,YAAA;EACA,kBAAA;EACA,qBAAA;EACA,iBAAA;EACA,kBAAA;EACA,yBAAA;AACF;;AAEA;EACE,0CAAA;AACF","file":"DiceSet.module.scss","sourcesContent":[".root {\n  padding: 4px;\n}\n\n.diceContainer {\n  padding: 4px;\n}\n\n.throwIndicatorStep {\n  border: 1px solid rgba(0, 0, 0, 0.4);\n  width: 16px;\n  height: 16px;\n  border-radius: 8px;\n  display: inline-block;\n  font-size: 0.7rem;\n  text-align: center;\n  background-color: #efefef;\n}\n\n.throwIndicatorStepUsed {\n  background-color: rgba(255, 255, 255, 0.3);\n}\n"]}]);
+exports.push([module.i, ".DiceSet_throwIndicatorStep__zENPt {\n  border: 1px solid rgba(0, 0, 0, 0.4);\n  width: 16px;\n  height: 16px;\n  border-radius: 8px;\n  display: inline-block;\n  font-size: 0.7rem;\n  text-align: center;\n  background-color: #efefef;\n}\n\n.DiceSet_throwIndicatorStepUsed__UcVBH {\n  background-color: rgba(255, 255, 255, 0.3);\n}", "",{"version":3,"sources":["DiceSet.module.scss"],"names":[],"mappings":"AAAA;EACE,oCAAA;EACA,WAAA;EACA,YAAA;EACA,kBAAA;EACA,qBAAA;EACA,iBAAA;EACA,kBAAA;EACA,yBAAA;AACF;;AAEA;EACE,0CAAA;AACF","file":"DiceSet.module.scss","sourcesContent":[".throwIndicatorStep {\n  border: 1px solid rgba(0, 0, 0, 0.4);\n  width: 16px;\n  height: 16px;\n  border-radius: 8px;\n  display: inline-block;\n  font-size: 0.7rem;\n  text-align: center;\n  background-color: #efefef;\n}\n\n.throwIndicatorStepUsed {\n  background-color: rgba(255, 255, 255, 0.3);\n}\n"]}]);
 // Exports
 exports.locals = {
-	"root": "DiceSet_root__1IzrT",
-	"diceContainer": "DiceSet_diceContainer__2F8Z6",
 	"throwIndicatorStep": "DiceSet_throwIndicatorStep__zENPt",
 	"throwIndicatorStepUsed": "DiceSet_throwIndicatorStepUsed__UcVBH"
 };

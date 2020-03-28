@@ -11,23 +11,23 @@ function getRandomInt(max) {
 const DiceSet = props => {
   const [diceValues, setDiceValues] = useState([
     {
-      value: 1,
+      value: 0,
       isSelected: false
     },
     {
-      value: 1,
+      value: 0,
       isSelected: false
     },
     {
-      value: 1,
+      value: 0,
       isSelected: false
     },
     {
-      value: 1,
+      value: 0,
       isSelected: false
     },
     {
-      value: 1,
+      value: 0,
       isSelected: false
     }
   ]);
@@ -53,54 +53,54 @@ const DiceSet = props => {
   };
 
   return (
-    <div className={styles.root}>
-      <Grid container direction="column" spacing={2}>
-        <Grid item>
-          <div className={styles.dice}>
-            {diceValues.map((diceValue, i) => (
-              <div
-                className={styles.diceContainer}
-                onClick={() => onDiceClick(i)}
-              >
-                <Dice
-                  key={"dice" + i}
-                  value={diceValue.value}
-                  isSelected={diceValue.isSelected}
-                />
-              </div>
-            ))}
-          </div>
-        </Grid>
-        <Grid item>
-          <Grid container spacing={1}>
-            {Array(3)
-              .fill(1)
-              .map((item, i) => (
-                <Grid item>
-                  <span
-                    className={cx(
-                      styles.throwIndicatorStep,
-                      throwCount > i && styles.throwIndicatorStepUsed
-                    )}
-                  >
-                    {i + 1}
-                  </span>
-                </Grid>
-              ))}
-          </Grid>
-        </Grid>
-        <Grid item>
-          <Button
-            variant="contained"
-            className={styles.throwButton}
-            onClick={onThrow}
-            disabled={!canThrow}
-          >
-            <img src="/static/throw.png" width={30} height={30} />
-          </Button>
+    <Grid container direction="column" spacing={2}>
+      <Grid item>
+        <Grid
+          container
+          direction="column"
+          alignItems="center"
+          justify="flex-start"
+        >
+          {diceValues.map((diceValue, i) => (
+            <Grid item onClick={() => onDiceClick(i)}>
+              <Dice
+                key={"dice" + i}
+                value={diceValue.value}
+                isSelected={diceValue.isSelected}
+              />
+            </Grid>
+          ))}
         </Grid>
       </Grid>
-    </div>
+      <Grid item>
+        <Grid container spacing={1}>
+          {Array(3)
+            .fill(1)
+            .map((item, i) => (
+              <Grid item>
+                <span
+                  className={cx(
+                    styles.throwIndicatorStep,
+                    throwCount > i && styles.throwIndicatorStepUsed
+                  )}
+                >
+                  {i + 1}
+                </span>
+              </Grid>
+            ))}
+        </Grid>
+      </Grid>
+      <Grid item>
+        <Button
+          variant="contained"
+          className={styles.throwButton}
+          onClick={onThrow}
+          disabled={!canThrow}
+        >
+          <img src="/static/throw.png" width={30} height={30} />
+        </Button>
+      </Grid>
+    </Grid>
   );
 };
 

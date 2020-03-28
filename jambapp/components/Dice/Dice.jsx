@@ -5,7 +5,7 @@ import styles from "./Dice.module.scss";
 const Dice = props => {
   const { value, isSelected } = props;
 
-  let diceValueStyle = null;
+  let diceValueStyle = styles.diceValue0;
   switch (value) {
     case 1:
       diceValueStyle = styles.diceValue1;

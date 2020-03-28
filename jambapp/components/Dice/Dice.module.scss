@@ -8,13 +8,18 @@ $diceSize: 50px;
 
 .selectionContainer {
   padding: 4px;
+  display: flex;
 }
 
 .selected {
   border: 2px dashed white;
+  border-radius: 4px;
   padding: 2px;
 }
 
+.diceValue0 {
+  background-image: url("/static/none.png");
+}
 .diceValue1 {
   background-image: url("/static/one.png");
 }
@@ -37,4 +42,5 @@ $diceSize: 50px;
 .diceValue {
   background-size: $diceSize $diceSize;
   background-repeat: no-repeat;
+  height: $diceSize;
 }

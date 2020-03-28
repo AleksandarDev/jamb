@@ -1792,7 +1792,7 @@ const Dice = props => {
     value,
     isSelected
   } = props;
-  let diceValueStyle = null;
+  let diceValueStyle = _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceValue0;
 
   switch (value) {
     case 1:
@@ -1858,6 +1858,7 @@ module.exports = {
 	"root": "Dice_root__2XBSj",
 	"selectionContainer": "Dice_selectionContainer___RHmx",
 	"selected": "Dice_selected__3Y0D9",
+	"diceValue0": "Dice_diceValue0__1C_xh",
 	"diceValue1": "Dice_diceValue1__1QWIP",
 	"diceValue2": "Dice_diceValue2__1Rm4t",
 	"diceValue3": "Dice_diceValue3__2-R8d",
@@ -1904,19 +1905,19 @@ const DiceSet = props => {
     0: diceValues,
     1: setDiceValues
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([{
-    value: 1,
+    value: 0,
     isSelected: false
   }, {
-    value: 1,
+    value: 0,
     isSelected: false
   }, {
-    value: 1,
+    value: 0,
     isSelected: false
   }, {
-    value: 1,
+    value: 0,
     isSelected: false
   }, {
-    value: 1,
+    value: 0,
     isSelected: false
   }]);
   const {
@@ -1946,8 +1947,10 @@ const DiceSet = props => {
     setDiceValues([...diceValues]);
   };
 
-  return __jsx("div", {
-    className: _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.root,
+  return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
+    container: true,
+    direction: "column",
+    spacing: 2,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -1955,9 +1958,7 @@ const DiceSet = props => {
       columnNumber: 5
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
-    container: true,
-    direction: "column",
-    spacing: 2,
+    item: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
@@ -1965,29 +1966,24 @@ const DiceSet = props => {
       columnNumber: 7
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
-    item: true,
+    container: true,
+    direction: "column",
+    alignItems: "center",
+    justify: "flex-start",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 58,
       columnNumber: 9
     }
-  }, __jsx("div", {
-    className: _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.dice,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59,
-      columnNumber: 11
-    }
-  }, diceValues.map((diceValue, i) => __jsx("div", {
-    className: _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceContainer,
+  }, diceValues.map((diceValue, i) => __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
+    item: true,
     onClick: () => onDiceClick(i),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
-      columnNumber: 15
+      lineNumber: 65,
+      columnNumber: 13
     }
   }, __jsx(_Dice_Dice__WEBPACK_IMPORTED_MODULE_1__["default"], {
     key: "dice" + i,
@@ -1996,16 +1992,16 @@ const DiceSet = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
-      columnNumber: 17
+      lineNumber: 66,
+      columnNumber: 15
     }
   }))))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
     item: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
-      columnNumber: 9
+      lineNumber: 75,
+      columnNumber: 7
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
     container: true,
@@ -2013,32 +2009,32 @@ const DiceSet = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
-      columnNumber: 11
+      lineNumber: 76,
+      columnNumber: 9
     }
   }, Array(3).fill(1).map((item, i) => __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
     item: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79,
-      columnNumber: 17
+      lineNumber: 80,
+      columnNumber: 15
     }
   }, __jsx("span", {
     className: clsx__WEBPACK_IMPORTED_MODULE_3___default()(_DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.throwIndicatorStep, throwCount > i && _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.throwIndicatorStepUsed),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80,
-      columnNumber: 19
+      lineNumber: 81,
+      columnNumber: 17
     }
   }, i + 1))))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
     item: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92,
-      columnNumber: 9
+      lineNumber: 93,
+      columnNumber: 7
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Button"], {
     variant: "contained",
@@ -2048,8 +2044,8 @@ const DiceSet = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93,
-      columnNumber: 11
+      lineNumber: 94,
+      columnNumber: 9
     }
   }, __jsx("img", {
     src: "/static/throw.png",
@@ -2058,10 +2054,10 @@ const DiceSet = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99,
-      columnNumber: 13
+      lineNumber: 100,
+      columnNumber: 11
     }
-  })))));
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (DiceSet);
@@ -2077,8 +2073,6 @@ const DiceSet = props => {
 
 // Exports
 module.exports = {
-	"root": "DiceSet_root__1IzrT",
-	"diceContainer": "DiceSet_diceContainer__2F8Z6",
 	"throwIndicatorStep": "DiceSet_throwIndicatorStep__zENPt",
 	"throwIndicatorStepUsed": "DiceSet_throwIndicatorStepUsed__UcVBH"
 };
