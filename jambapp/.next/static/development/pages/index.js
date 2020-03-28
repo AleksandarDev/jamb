@@ -1,32 +1,178 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
-/***/ "./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Faleksandartoplek%2FDocuments%2Fjamb%2Fjambapp%2Fpages%2Findex.jsx!./":
-/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Faleksandartoplek%2FDocuments%2Fjamb%2Fjambapp%2Fpages%2Findex.jsx ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./components/Chat/ChatBox.jsx":
+/*!*************************************!*\
+  !*** ./components/Chat/ChatBox.jsx ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChatBox.module.scss */ "./components/Chat/ChatBox.module.scss");
+/* harmony import */ var _ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _this = undefined,
+    _jsxFileName = "/Users/aleksandartoplek/Documents/jamb/jambapp/components/Chat/ChatBox.jsx";
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
-      var mod = __webpack_require__(/*! ./pages/index.jsx */ "./pages/index.jsx")
-      if(true) {
-        module.hot.accept(/*! ./pages/index.jsx */ "./pages/index.jsx", function() {
-          if(!next.router.components["/"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/index.jsx */ "./pages/index.jsx")
-          next.router.update("/", updatedPage)
-        })
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+var ChatBox = function ChatBox(props) {
+  var messages = props.messages,
+      onSendMessage = props.onSendMessage;
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
+      messageText = _useState[0],
+      setMessageText = _useState[1];
+
+  return __jsx("div", {
+    className: _ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.root,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 9
+    }
+  }, __jsx("ul", {
+    className: _ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.list,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 13
+    }
+  }, messages.map(function (message) {
+    return __jsx("li", {
+      key: message.id,
+      className: _ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.messageBlock,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15,
+        columnNumber: 21
       }
-      return mod
-    }]);
-  
+    }, __jsx("span", {
+      className: _ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.messageUser,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16,
+        columnNumber: 25
+      }
+    }, message.sender), __jsx("span", {
+      className: _ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.messageContent,
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17,
+        columnNumber: 25
+      }
+    }, message.text));
+  })), __jsx("div", {
+    className: _ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.inputContainer,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 13
+    }
+  }, __jsx("input", {
+    value: messageText,
+    onChange: function onChange(e) {
+      return setMessageText(e.target.value);
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 17
+    }
+  }), __jsx("button", {
+    onClick: function onClick() {
+      return onSendMessage(messageText);
+    },
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 17
+    }
+  }, "Send")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ChatBox);
 
 /***/ }),
 
-/***/ "./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js":
-/*!****************************************************************************************************************************!*\
-  !*** ./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js ***!
-  \****************************************************************************************************************************/
+/***/ "./components/Chat/ChatBox.module.scss":
+/*!*********************************************!*\
+  !*** ./components/Chat/ChatBox.module.scss ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!../../node_modules/postcss-loader/src??__nextjs_postcss!../../node_modules/resolve-url-loader??ref--5-oneOf-3-3!../../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./ChatBox.module.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./components/Chat/ChatBox.module.scss");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = function(element){// These elements should always exist. If they do not,
+// this code should fail.
+var anchorElement=document.querySelector('#__next_css__DO_NOT_USE__');var parentNode=anchorElement.parentNode;// Normally <head>
+// Each style tag should be placed right before our
+// anchor. By inserting before and not after, we do not
+// need to track the last inserted element.
+parentNode.insertBefore(element,anchorElement)// Remember: this is development only code.
+//
+// After styles are injected, we need to remove the
+// <style> tags that set `body { display: none; }`.
+//
+// We use `requestAnimationFrame` as a way to defer
+// this operation since there may be multiple style
+// tags.
+;(self.requestAnimationFrame||setTimeout)(function(){for(var x=document.querySelectorAll('[data-next-hide-fouc]'),i=x.length;i--;){x[i].parentNode.removeChild(x[i]);}});};
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!../../node_modules/postcss-loader/src??__nextjs_postcss!../../node_modules/resolve-url-loader??ref--5-oneOf-3-3!../../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./ChatBox.module.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./components/Chat/ChatBox.module.scss",
+      function () {
+        var newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!../../node_modules/postcss-loader/src??__nextjs_postcss!../../node_modules/resolve-url-loader??ref--5-oneOf-3-3!../../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./ChatBox.module.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./components/Chat/ChatBox.module.scss");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js ***!
+  \**********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -45,10 +191,10 @@ function _arrayWithoutHoles(arr) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/esm/iterableToArray.js":
-/*!**************************************************************************************************************************!*\
-  !*** ./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/esm/iterableToArray.js ***!
-  \**************************************************************************************************************************/
+/***/ "./node_modules/@babel/runtime/helpers/esm/iterableToArray.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js ***!
+  \********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -61,10 +207,10 @@ function _iterableToArray(iter) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js":
-/*!****************************************************************************************************************************!*\
-  !*** ./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js ***!
-  \****************************************************************************************************************************/
+/***/ "./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js ***!
+  \**********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -77,19 +223,19 @@ function _nonIterableSpread() {
 
 /***/ }),
 
-/***/ "./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js":
-/*!****************************************************************************************************************************!*\
-  !*** ./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js ***!
-  \****************************************************************************************************************************/
+/***/ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js ***!
+  \**********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _toConsumableArray; });
-/* harmony import */ var _arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles */ "./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js");
-/* harmony import */ var _iterableToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray */ "./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/esm/iterableToArray.js");
-/* harmony import */ var _nonIterableSpread__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nonIterableSpread */ "./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js");
+/* harmony import */ var _arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles */ "./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js");
+/* harmony import */ var _iterableToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray */ "./node_modules/@babel/runtime/helpers/esm/iterableToArray.js");
+/* harmony import */ var _nonIterableSpread__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nonIterableSpread */ "./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js");
 
 
 
@@ -99,34 +245,34 @@ function _toConsumableArray(arr) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/index.js":
-/*!***********************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/index.js ***!
-  \***********************************************************************************/
+/***/ "./node_modules/axios/index.js":
+/*!*************************************!*\
+  !*** ./node_modules/axios/index.js ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./lib/axios */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/axios.js");
+module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/lib/axios.js");
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/adapters/xhr.js":
-/*!**********************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/adapters/xhr.js ***!
-  \**********************************************************************************************/
+/***/ "./node_modules/axios/lib/adapters/xhr.js":
+/*!************************************************!*\
+  !*** ./node_modules/axios/lib/adapters/xhr.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/utils.js");
-var settle = __webpack_require__(/*! ./../core/settle */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/settle.js");
-var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/buildURL.js");
-var buildFullPath = __webpack_require__(/*! ../core/buildFullPath */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/buildFullPath.js");
-var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/parseHeaders.js");
-var isURLSameOrigin = __webpack_require__(/*! ./../helpers/isURLSameOrigin */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/isURLSameOrigin.js");
-var createError = __webpack_require__(/*! ../core/createError */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/createError.js");
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var settle = __webpack_require__(/*! ./../core/settle */ "./node_modules/axios/lib/core/settle.js");
+var buildURL = __webpack_require__(/*! ./../helpers/buildURL */ "./node_modules/axios/lib/helpers/buildURL.js");
+var buildFullPath = __webpack_require__(/*! ../core/buildFullPath */ "./node_modules/axios/lib/core/buildFullPath.js");
+var parseHeaders = __webpack_require__(/*! ./../helpers/parseHeaders */ "./node_modules/axios/lib/helpers/parseHeaders.js");
+var isURLSameOrigin = __webpack_require__(/*! ./../helpers/isURLSameOrigin */ "./node_modules/axios/lib/helpers/isURLSameOrigin.js");
+var createError = __webpack_require__(/*! ../core/createError */ "./node_modules/axios/lib/core/createError.js");
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -223,7 +369,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(/*! ./../helpers/cookies */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/cookies.js");
+      var cookies = __webpack_require__(/*! ./../helpers/cookies */ "./node_modules/axios/lib/helpers/cookies.js");
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(fullPath)) && config.xsrfCookieName ?
@@ -302,21 +448,21 @@ module.exports = function xhrAdapter(config) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/axios.js":
-/*!***************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/axios.js ***!
-  \***************************************************************************************/
+/***/ "./node_modules/axios/lib/axios.js":
+/*!*****************************************!*\
+  !*** ./node_modules/axios/lib/axios.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./utils */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/utils.js");
-var bind = __webpack_require__(/*! ./helpers/bind */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/bind.js");
-var Axios = __webpack_require__(/*! ./core/Axios */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/Axios.js");
-var mergeConfig = __webpack_require__(/*! ./core/mergeConfig */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/mergeConfig.js");
-var defaults = __webpack_require__(/*! ./defaults */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/defaults.js");
+var utils = __webpack_require__(/*! ./utils */ "./node_modules/axios/lib/utils.js");
+var bind = __webpack_require__(/*! ./helpers/bind */ "./node_modules/axios/lib/helpers/bind.js");
+var Axios = __webpack_require__(/*! ./core/Axios */ "./node_modules/axios/lib/core/Axios.js");
+var mergeConfig = __webpack_require__(/*! ./core/mergeConfig */ "./node_modules/axios/lib/core/mergeConfig.js");
+var defaults = __webpack_require__(/*! ./defaults */ "./node_modules/axios/lib/defaults.js");
 
 /**
  * Create an instance of Axios
@@ -349,15 +495,15 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(/*! ./cancel/Cancel */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/cancel/Cancel.js");
-axios.CancelToken = __webpack_require__(/*! ./cancel/CancelToken */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/cancel/CancelToken.js");
-axios.isCancel = __webpack_require__(/*! ./cancel/isCancel */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/cancel/isCancel.js");
+axios.Cancel = __webpack_require__(/*! ./cancel/Cancel */ "./node_modules/axios/lib/cancel/Cancel.js");
+axios.CancelToken = __webpack_require__(/*! ./cancel/CancelToken */ "./node_modules/axios/lib/cancel/CancelToken.js");
+axios.isCancel = __webpack_require__(/*! ./cancel/isCancel */ "./node_modules/axios/lib/cancel/isCancel.js");
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(/*! ./helpers/spread */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/spread.js");
+axios.spread = __webpack_require__(/*! ./helpers/spread */ "./node_modules/axios/lib/helpers/spread.js");
 
 module.exports = axios;
 
@@ -367,10 +513,10 @@ module.exports.default = axios;
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/cancel/Cancel.js":
-/*!***********************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/cancel/Cancel.js ***!
-  \***********************************************************************************************/
+/***/ "./node_modules/axios/lib/cancel/Cancel.js":
+/*!*************************************************!*\
+  !*** ./node_modules/axios/lib/cancel/Cancel.js ***!
+  \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -398,17 +544,17 @@ module.exports = Cancel;
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/cancel/CancelToken.js":
-/*!****************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/cancel/CancelToken.js ***!
-  \****************************************************************************************************/
+/***/ "./node_modules/axios/lib/cancel/CancelToken.js":
+/*!******************************************************!*\
+  !*** ./node_modules/axios/lib/cancel/CancelToken.js ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Cancel = __webpack_require__(/*! ./Cancel */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/cancel/Cancel.js");
+var Cancel = __webpack_require__(/*! ./Cancel */ "./node_modules/axios/lib/cancel/Cancel.js");
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -467,10 +613,10 @@ module.exports = CancelToken;
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/cancel/isCancel.js":
-/*!*************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/cancel/isCancel.js ***!
-  \*************************************************************************************************/
+/***/ "./node_modules/axios/lib/cancel/isCancel.js":
+/*!***************************************************!*\
+  !*** ./node_modules/axios/lib/cancel/isCancel.js ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -484,21 +630,21 @@ module.exports = function isCancel(value) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/Axios.js":
-/*!********************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/Axios.js ***!
-  \********************************************************************************************/
+/***/ "./node_modules/axios/lib/core/Axios.js":
+/*!**********************************************!*\
+  !*** ./node_modules/axios/lib/core/Axios.js ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/utils.js");
-var buildURL = __webpack_require__(/*! ../helpers/buildURL */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/buildURL.js");
-var InterceptorManager = __webpack_require__(/*! ./InterceptorManager */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/InterceptorManager.js");
-var dispatchRequest = __webpack_require__(/*! ./dispatchRequest */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/dispatchRequest.js");
-var mergeConfig = __webpack_require__(/*! ./mergeConfig */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/mergeConfig.js");
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var buildURL = __webpack_require__(/*! ../helpers/buildURL */ "./node_modules/axios/lib/helpers/buildURL.js");
+var InterceptorManager = __webpack_require__(/*! ./InterceptorManager */ "./node_modules/axios/lib/core/InterceptorManager.js");
+var dispatchRequest = __webpack_require__(/*! ./dispatchRequest */ "./node_modules/axios/lib/core/dispatchRequest.js");
+var mergeConfig = __webpack_require__(/*! ./mergeConfig */ "./node_modules/axios/lib/core/mergeConfig.js");
 
 /**
  * Create a new instance of Axios
@@ -590,17 +736,17 @@ module.exports = Axios;
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/InterceptorManager.js":
-/*!*********************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/InterceptorManager.js ***!
-  \*********************************************************************************************************/
+/***/ "./node_modules/axios/lib/core/InterceptorManager.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/axios/lib/core/InterceptorManager.js ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
 
 function InterceptorManager() {
   this.handlers = [];
@@ -654,18 +800,18 @@ module.exports = InterceptorManager;
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/buildFullPath.js":
-/*!****************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/buildFullPath.js ***!
-  \****************************************************************************************************/
+/***/ "./node_modules/axios/lib/core/buildFullPath.js":
+/*!******************************************************!*\
+  !*** ./node_modules/axios/lib/core/buildFullPath.js ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isAbsoluteURL = __webpack_require__(/*! ../helpers/isAbsoluteURL */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/isAbsoluteURL.js");
-var combineURLs = __webpack_require__(/*! ../helpers/combineURLs */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/combineURLs.js");
+var isAbsoluteURL = __webpack_require__(/*! ../helpers/isAbsoluteURL */ "./node_modules/axios/lib/helpers/isAbsoluteURL.js");
+var combineURLs = __webpack_require__(/*! ../helpers/combineURLs */ "./node_modules/axios/lib/helpers/combineURLs.js");
 
 /**
  * Creates a new URL by combining the baseURL with the requestedURL,
@@ -686,17 +832,17 @@ module.exports = function buildFullPath(baseURL, requestedURL) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/createError.js":
-/*!**************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/createError.js ***!
-  \**************************************************************************************************/
+/***/ "./node_modules/axios/lib/core/createError.js":
+/*!****************************************************!*\
+  !*** ./node_modules/axios/lib/core/createError.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var enhanceError = __webpack_require__(/*! ./enhanceError */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/enhanceError.js");
+var enhanceError = __webpack_require__(/*! ./enhanceError */ "./node_modules/axios/lib/core/enhanceError.js");
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -716,20 +862,20 @@ module.exports = function createError(message, config, code, request, response) 
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/dispatchRequest.js":
-/*!******************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/dispatchRequest.js ***!
-  \******************************************************************************************************/
+/***/ "./node_modules/axios/lib/core/dispatchRequest.js":
+/*!********************************************************!*\
+  !*** ./node_modules/axios/lib/core/dispatchRequest.js ***!
+  \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/utils.js");
-var transformData = __webpack_require__(/*! ./transformData */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/transformData.js");
-var isCancel = __webpack_require__(/*! ../cancel/isCancel */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/cancel/isCancel.js");
-var defaults = __webpack_require__(/*! ../defaults */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/defaults.js");
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
+var transformData = __webpack_require__(/*! ./transformData */ "./node_modules/axios/lib/core/transformData.js");
+var isCancel = __webpack_require__(/*! ../cancel/isCancel */ "./node_modules/axios/lib/cancel/isCancel.js");
+var defaults = __webpack_require__(/*! ../defaults */ "./node_modules/axios/lib/defaults.js");
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -807,10 +953,10 @@ module.exports = function dispatchRequest(config) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/enhanceError.js":
-/*!***************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/enhanceError.js ***!
-  \***************************************************************************************************/
+/***/ "./node_modules/axios/lib/core/enhanceError.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/axios/lib/core/enhanceError.js ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -861,17 +1007,17 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/mergeConfig.js":
-/*!**************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/mergeConfig.js ***!
-  \**************************************************************************************************/
+/***/ "./node_modules/axios/lib/core/mergeConfig.js":
+/*!****************************************************!*\
+  !*** ./node_modules/axios/lib/core/mergeConfig.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ../utils */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ../utils */ "./node_modules/axios/lib/utils.js");
 
 /**
  * Config-specific merge-function which creates a new config-object
@@ -946,17 +1092,17 @@ module.exports = function mergeConfig(config1, config2) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/settle.js":
-/*!*********************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/settle.js ***!
-  \*********************************************************************************************/
+/***/ "./node_modules/axios/lib/core/settle.js":
+/*!***********************************************!*\
+  !*** ./node_modules/axios/lib/core/settle.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var createError = __webpack_require__(/*! ./createError */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/createError.js");
+var createError = __webpack_require__(/*! ./createError */ "./node_modules/axios/lib/core/createError.js");
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -983,17 +1129,17 @@ module.exports = function settle(resolve, reject, response) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/transformData.js":
-/*!****************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/core/transformData.js ***!
-  \****************************************************************************************************/
+/***/ "./node_modules/axios/lib/core/transformData.js":
+/*!******************************************************!*\
+  !*** ./node_modules/axios/lib/core/transformData.js ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
 
 /**
  * Transform the data for a request or a response
@@ -1015,18 +1161,18 @@ module.exports = function transformData(data, headers, fns) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/defaults.js":
-/*!******************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/defaults.js ***!
-  \******************************************************************************************/
+/***/ "./node_modules/axios/lib/defaults.js":
+/*!********************************************!*\
+  !*** ./node_modules/axios/lib/defaults.js ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
-var utils = __webpack_require__(/*! ./utils */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/utils.js");
-var normalizeHeaderName = __webpack_require__(/*! ./helpers/normalizeHeaderName */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/normalizeHeaderName.js");
+var utils = __webpack_require__(/*! ./utils */ "./node_modules/axios/lib/utils.js");
+var normalizeHeaderName = __webpack_require__(/*! ./helpers/normalizeHeaderName */ "./node_modules/axios/lib/helpers/normalizeHeaderName.js");
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -1042,10 +1188,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(/*! ./adapters/xhr */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/adapters/xhr.js");
+    adapter = __webpack_require__(/*! ./adapters/xhr */ "./node_modules/axios/lib/adapters/xhr.js");
   } else if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(/*! ./adapters/http */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/adapters/xhr.js");
+    adapter = __webpack_require__(/*! ./adapters/http */ "./node_modules/axios/lib/adapters/xhr.js");
   }
   return adapter;
 }
@@ -1121,14 +1267,14 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../process-npm-0.11.10-aeb3b641ae-1.zip/node_modules/process/browser.js */ "./.yarn/cache/process-npm-0.11.10-aeb3b641ae-1.zip/node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/bind.js":
-/*!**********************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/bind.js ***!
-  \**********************************************************************************************/
+/***/ "./node_modules/axios/lib/helpers/bind.js":
+/*!************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/bind.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1148,17 +1294,17 @@ module.exports = function bind(fn, thisArg) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/buildURL.js":
-/*!**************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/buildURL.js ***!
-  \**************************************************************************************************/
+/***/ "./node_modules/axios/lib/helpers/buildURL.js":
+/*!****************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/buildURL.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
 
 function encode(val) {
   return encodeURIComponent(val).
@@ -1231,10 +1377,10 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/combineURLs.js":
-/*!*****************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/combineURLs.js ***!
-  \*****************************************************************************************************/
+/***/ "./node_modules/axios/lib/helpers/combineURLs.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/combineURLs.js ***!
+  \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1257,17 +1403,17 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/cookies.js":
-/*!*************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/cookies.js ***!
-  \*************************************************************************************************/
+/***/ "./node_modules/axios/lib/helpers/cookies.js":
+/*!***************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/cookies.js ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
 
 module.exports = (
   utils.isStandardBrowserEnv() ?
@@ -1322,10 +1468,10 @@ module.exports = (
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/isAbsoluteURL.js":
-/*!*******************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/isAbsoluteURL.js ***!
-  \*******************************************************************************************************/
+/***/ "./node_modules/axios/lib/helpers/isAbsoluteURL.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/isAbsoluteURL.js ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1348,17 +1494,17 @@ module.exports = function isAbsoluteURL(url) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/isURLSameOrigin.js":
-/*!*********************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/isURLSameOrigin.js ***!
-  \*********************************************************************************************************/
+/***/ "./node_modules/axios/lib/helpers/isURLSameOrigin.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/isURLSameOrigin.js ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
 
 module.exports = (
   utils.isStandardBrowserEnv() ?
@@ -1428,17 +1574,17 @@ module.exports = (
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/normalizeHeaderName.js":
-/*!*************************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/normalizeHeaderName.js ***!
-  \*************************************************************************************************************/
+/***/ "./node_modules/axios/lib/helpers/normalizeHeaderName.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/normalizeHeaderName.js ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ../utils */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ../utils */ "./node_modules/axios/lib/utils.js");
 
 module.exports = function normalizeHeaderName(headers, normalizedName) {
   utils.forEach(headers, function processHeader(value, name) {
@@ -1452,17 +1598,17 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/parseHeaders.js":
-/*!******************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/parseHeaders.js ***!
-  \******************************************************************************************************/
+/***/ "./node_modules/axios/lib/helpers/parseHeaders.js":
+/*!********************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/parseHeaders.js ***!
+  \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(/*! ./../utils */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/utils.js");
+var utils = __webpack_require__(/*! ./../utils */ "./node_modules/axios/lib/utils.js");
 
 // Headers whose duplicates are ignored by node
 // c.f. https://nodejs.org/api/http.html#http_message_headers
@@ -1517,10 +1663,10 @@ module.exports = function parseHeaders(headers) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/spread.js":
-/*!************************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/spread.js ***!
-  \************************************************************************************************/
+/***/ "./node_modules/axios/lib/helpers/spread.js":
+/*!**************************************************!*\
+  !*** ./node_modules/axios/lib/helpers/spread.js ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1556,17 +1702,17 @@ module.exports = function spread(callback) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/utils.js":
-/*!***************************************************************************************!*\
-  !*** ./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/utils.js ***!
-  \***************************************************************************************/
+/***/ "./node_modules/axios/lib/utils.js":
+/*!*****************************************!*\
+  !*** ./node_modules/axios/lib/utils.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var bind = __webpack_require__(/*! ./helpers/bind */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/lib/helpers/bind.js");
+var bind = __webpack_require__(/*! ./helpers/bind */ "./node_modules/axios/lib/helpers/bind.js");
 
 /*global toString:true*/
 
@@ -1912,10 +2058,153 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./.yarn/cache/process-npm-0.11.10-aeb3b641ae-1.zip/node_modules/process/browser.js":
-/*!******************************************************************************************!*\
-  !*** ./.yarn/cache/process-npm-0.11.10-aeb3b641ae-1.zip/node_modules/process/browser.js ***!
-  \******************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./components/Chat/ChatBox.module.scss":
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-3-1!./node_modules/postcss-loader/src??__nextjs_postcss!./node_modules/resolve-url-loader??ref--5-oneOf-3-3!./node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-3-4!./components/Chat/ChatBox.module.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
+// Module
+exports.push([module.i, ".ChatBox_root__1Ovyr {\n  background-color: #ededed;\n}\n\n.ChatBox_messageBlock__8xkRO {\n  list-style-type: none;\n}\n\n.ChatBox_messageUser__26ol0 {\n  font-weight: bold;\n  padding-right: 12px;\n}", "",{"version":3,"sources":["ChatBox.module.scss"],"names":[],"mappings":"AAAA;EACI,yBAAA;AACJ;;AAMA;EACI,qBAAA;AAHJ;;AAMA;EACI,iBAAA;EACA,mBAAA;AAHJ","file":"ChatBox.module.scss","sourcesContent":[".root {\n    background-color: #ededed;\n}\n\n.list {\n\n}\n\n.messageBlock {\n    list-style-type: none;\n}\n\n.messageUser {\n    font-weight: bold;\n    padding-right: 12px;\n}\n\n.messageContent {\n\n}\n\n.inputContainer {\n\n}"]}]);
+// Exports
+exports.locals = {
+	"root": "ChatBox_root__1Ovyr",
+	"messageBlock": "ChatBox_messageBlock__8xkRO",
+	"messageUser": "ChatBox_messageUser__26ol0"
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+// eslint-disable-next-line func-names
+module.exports = function (useSourceMap) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item, useSourceMap);
+
+      if (item[2]) {
+        return "@media ".concat(item[2], "{").concat(content, "}");
+      }
+
+      return content;
+    }).join('');
+  }; // import a list of modules into the list
+  // eslint-disable-next-line func-names
+
+
+  list.i = function (modules, mediaQuery) {
+    if (typeof modules === 'string') {
+      // eslint-disable-next-line no-param-reassign
+      modules = [[null, modules, '']];
+    }
+
+    var alreadyImportedModules = {};
+
+    for (var i = 0; i < this.length; i++) {
+      // eslint-disable-next-line prefer-destructuring
+      var id = this[i][0];
+
+      if (id != null) {
+        alreadyImportedModules[id] = true;
+      }
+    }
+
+    for (var _i = 0; _i < modules.length; _i++) {
+      var item = modules[_i]; // skip already imported module
+      // this implementation is not 100% perfect for weird media query combinations
+      // when a module is imported multiple times with different media queries.
+      // I hope this will never occur (Hey this way we have smaller bundles)
+
+      if (item[0] == null || !alreadyImportedModules[item[0]]) {
+        if (mediaQuery && !item[2]) {
+          item[2] = mediaQuery;
+        } else if (mediaQuery) {
+          item[2] = "(".concat(item[2], ") and (").concat(mediaQuery, ")");
+        }
+
+        list.push(item);
+      }
+    }
+  };
+
+  return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring
+
+  var cssMapping = item[3];
+
+  if (!cssMapping) {
+    return content;
+  }
+
+  if (useSourceMap && typeof btoa === 'function') {
+    var sourceMapping = toComment(cssMapping);
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return "/*# sourceURL=".concat(cssMapping.sourceRoot).concat(source, " */");
+    });
+    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+  }
+
+  return [content].join('\n');
+} // Adapted from convert-source-map (MIT)
+
+
+function toComment(sourceMap) {
+  // eslint-disable-next-line no-undef
+  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+  var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
+  return "/*# ".concat(data, " */");
+}
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Faleksandartoplek%2FDocuments%2Fjamb%2Fjambapp%2Fpages%2Findex.jsx!./":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Faleksandartoplek%2FDocuments%2Fjamb%2Fjambapp%2Fpages%2Findex.jsx ***!
+  \*****************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
+      var mod = __webpack_require__(/*! ./pages/index.jsx */ "./pages/index.jsx")
+      if(true) {
+        module.hot.accept(/*! ./pages/index.jsx */ "./pages/index.jsx", function() {
+          if(!next.router.components["/"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/index.jsx */ "./pages/index.jsx")
+          next.router.update("/", updatedPage)
+        })
+      }
+      return mod
+    }]);
+  
+
+/***/ }),
+
+/***/ "./node_modules/process/browser.js":
+/*!*****************************************!*\
+  !*** ./node_modules/process/browser.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2107,14 +2396,307 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
-/***/ "./.yarn/cache/react-npm-16.13.1-56d408860d-1.zip/node_modules/react/index.js":
-/*!******************************************************************************************************************************************!*\
-  !*** delegated ./.yarn/cache/react-npm-16.13.1-56d408860d-1.zip/node_modules/react/index.js from dll-reference dll_39c7cba8761da30fa636 ***!
-  \******************************************************************************************************************************************/
+/***/ "./node_modules/react/index.js":
+/*!*******************************************************************************************!*\
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_2adc2403d89adc16ead0 ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_39c7cba8761da30fa636 */ "dll-reference dll_39c7cba8761da30fa636"))("./.yarn/cache/react-npm-16.13.1-56d408860d-1.zip/node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0 */ "dll-reference dll_2adc2403d89adc16ead0"))("./node_modules/react/index.js");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var stylesInDom = {};
+
+var isOldIE = function isOldIE() {
+  var memo;
+  return function memorize() {
+    if (typeof memo === 'undefined') {
+      // Test for IE <= 9 as proposed by Browserhacks
+      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+      // Tests for existence of standard globals is to allow style-loader
+      // to operate correctly into non-standard environments
+      // @see https://github.com/webpack-contrib/style-loader/issues/177
+      memo = Boolean(window && document && document.all && !window.atob);
+    }
+
+    return memo;
+  };
+}();
+
+var getTarget = function getTarget() {
+  var memo = {};
+  return function memorize(target) {
+    if (typeof memo[target] === 'undefined') {
+      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
+
+      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+        try {
+          // This will throw an exception if access to iframe is blocked
+          // due to cross-origin restrictions
+          styleTarget = styleTarget.contentDocument.head;
+        } catch (e) {
+          // istanbul ignore next
+          styleTarget = null;
+        }
+      }
+
+      memo[target] = styleTarget;
+    }
+
+    return memo[target];
+  };
+}();
+
+function listToStyles(list, options) {
+  var styles = [];
+  var newStyles = {};
+
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var css = item[1];
+    var media = item[2];
+    var sourceMap = item[3];
+    var part = {
+      css: css,
+      media: media,
+      sourceMap: sourceMap
+    };
+
+    if (!newStyles[id]) {
+      styles.push(newStyles[id] = {
+        id: id,
+        parts: [part]
+      });
+    } else {
+      newStyles[id].parts.push(part);
+    }
+  }
+
+  return styles;
+}
+
+function addStylesToDom(styles, options) {
+  for (var i = 0; i < styles.length; i++) {
+    var item = styles[i];
+    var domStyle = stylesInDom[item.id];
+    var j = 0;
+
+    if (domStyle) {
+      domStyle.refs++;
+
+      for (; j < domStyle.parts.length; j++) {
+        domStyle.parts[j](item.parts[j]);
+      }
+
+      for (; j < item.parts.length; j++) {
+        domStyle.parts.push(addStyle(item.parts[j], options));
+      }
+    } else {
+      var parts = [];
+
+      for (; j < item.parts.length; j++) {
+        parts.push(addStyle(item.parts[j], options));
+      }
+
+      stylesInDom[item.id] = {
+        id: item.id,
+        refs: 1,
+        parts: parts
+      };
+    }
+  }
+}
+
+function insertStyleElement(options) {
+  var style = document.createElement('style');
+
+  if (typeof options.attributes.nonce === 'undefined') {
+    var nonce =  true ? __webpack_require__.nc : undefined;
+
+    if (nonce) {
+      options.attributes.nonce = nonce;
+    }
+  }
+
+  Object.keys(options.attributes).forEach(function (key) {
+    style.setAttribute(key, options.attributes[key]);
+  });
+
+  if (typeof options.insert === 'function') {
+    options.insert(style);
+  } else {
+    var target = getTarget(options.insert || 'head');
+
+    if (!target) {
+      throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+    }
+
+    target.appendChild(style);
+  }
+
+  return style;
+}
+
+function removeStyleElement(style) {
+  // istanbul ignore if
+  if (style.parentNode === null) {
+    return false;
+  }
+
+  style.parentNode.removeChild(style);
+}
+/* istanbul ignore next  */
+
+
+var replaceText = function replaceText() {
+  var textStore = [];
+  return function replace(index, replacement) {
+    textStore[index] = replacement;
+    return textStore.filter(Boolean).join('\n');
+  };
+}();
+
+function applyToSingletonTag(style, index, remove, obj) {
+  var css = remove ? '' : obj.css; // For old IE
+
+  /* istanbul ignore if  */
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = replaceText(index, css);
+  } else {
+    var cssNode = document.createTextNode(css);
+    var childNodes = style.childNodes;
+
+    if (childNodes[index]) {
+      style.removeChild(childNodes[index]);
+    }
+
+    if (childNodes.length) {
+      style.insertBefore(cssNode, childNodes[index]);
+    } else {
+      style.appendChild(cssNode);
+    }
+  }
+}
+
+function applyToTag(style, options, obj) {
+  var css = obj.css;
+  var media = obj.media;
+  var sourceMap = obj.sourceMap;
+
+  if (media) {
+    style.setAttribute('media', media);
+  }
+
+  if (sourceMap && btoa) {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  } // For old IE
+
+  /* istanbul ignore if  */
+
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    while (style.firstChild) {
+      style.removeChild(style.firstChild);
+    }
+
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var singleton = null;
+var singletonCounter = 0;
+
+function addStyle(obj, options) {
+  var style;
+  var update;
+  var remove;
+
+  if (options.singleton) {
+    var styleIndex = singletonCounter++;
+    style = singleton || (singleton = insertStyleElement(options));
+    update = applyToSingletonTag.bind(null, style, styleIndex, false);
+    remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+  } else {
+    style = insertStyleElement(options);
+    update = applyToTag.bind(null, style, options);
+
+    remove = function remove() {
+      removeStyleElement(style);
+    };
+  }
+
+  update(obj);
+  return function updateStyle(newObj) {
+    if (newObj) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {
+        return;
+      }
+
+      update(obj = newObj);
+    } else {
+      remove();
+    }
+  };
+}
+
+module.exports = function (list, options) {
+  options = options || {};
+  options.attributes = typeof options.attributes === 'object' ? options.attributes : {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+  // tags it will allow on a page
+
+  if (!options.singleton && typeof options.singleton !== 'boolean') {
+    options.singleton = isOldIE();
+  }
+
+  var styles = listToStyles(list, options);
+  addStylesToDom(styles, options);
+  return function update(newList) {
+    var mayRemove = [];
+
+    for (var i = 0; i < styles.length; i++) {
+      var item = styles[i];
+      var domStyle = stylesInDom[item.id];
+
+      if (domStyle) {
+        domStyle.refs--;
+        mayRemove.push(domStyle);
+      }
+    }
+
+    if (newList) {
+      var newStyles = listToStyles(newList, options);
+      addStylesToDom(newStyles, options);
+    }
+
+    for (var _i = 0; _i < mayRemove.length; _i++) {
+      var _domStyle = mayRemove[_i];
+
+      if (_domStyle.refs === 0) {
+        for (var j = 0; j < _domStyle.parts.length; j++) {
+          _domStyle.parts[j]();
+        }
+
+        delete stylesInDom[_domStyle.id];
+      }
+    }
+  };
+};
 
 /***/ }),
 
@@ -2127,11 +2709,12 @@ module.exports = (__webpack_require__(/*! dll-reference dll_39c7cba8761da30fa636
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Users_aleksandartoplek_Documents_jamb_jambapp_yarn_cache_babel_runtime_npm_7_7_2_f97af02eaa_1_zip_node_modules_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/esm/toConsumableArray */ "./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./.yarn/cache/react-npm-16.13.1-56d408860d-1.zip/node_modules/react/index.js");
+/* harmony import */ var _babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./.yarn/cache/axios-npm-0.19.2-e4e8599895-1.zip/node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_Chat_ChatBox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Chat/ChatBox */ "./components/Chat/ChatBox.jsx");
 
 
 var _this = undefined,
@@ -2140,8 +2723,18 @@ var _this = undefined,
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
+
+
+function uuidv4() {
+  return 'xxxxxxxx'.replace(/[xy]/g, function (c) {
+    var r = Math.random() * 16 | 0,
+        v = c == 'x' ? r : r & 0x3 | 0x8;
+    return v.toString(16);
+  });
+}
+
 var data = {
-  userName: "userName"
+  userName: "guest-" + uuidv4()
 };
 var apiBaseUrl = "https://jamb.azurewebsites.net";
 
@@ -2150,16 +2743,15 @@ var Index = function Index() {
       isReady = _useState[0],
       setIsReady = _useState[1];
 
-  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(new Array()),
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])([{
+    sender: "test",
+    text: 'bla bla'
+  }]),
       messages = _useState2[0],
       setMessages = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(''),
-      newMessageText = _useState3[0],
-      setNewMessageText = _useState3[1];
-
-  var sendMessageClick = function sendMessageClick() {
-    sendMessage(data.userName, newMessageText);
+  var sendMessageClick = function sendMessageClick(messageText) {
+    sendMessage(data.userName, messageText);
   };
 
   function sendMessage(sender, messageText) {
@@ -2174,10 +2766,9 @@ var Index = function Index() {
   var counter = 0;
 
   function newMessage(message) {
-    message.id = counter++; // vue transitions need an id
-
+    message.id = counter++;
     messages.unshift(message);
-    setMessages(Object(_Users_aleksandartoplek_Documents_jamb_jambapp_yarn_cache_babel_runtime_npm_7_7_2_f97af02eaa_1_zip_node_modules_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(messages));
+    setMessages(Object(_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(messages));
   }
 
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
@@ -2197,67 +2788,46 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 55,
       columnNumber: 5
     }
   }, __jsx("h1", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 56,
       columnNumber: 7
     }
-  }, "Jamb"), __jsx("div", {
+  }, "JAMB"), __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
+      lineNumber: 57,
       columnNumber: 7
     }
-  }, isReady ? "Spojen" : "Spajanje..."), __jsx("div", {
+  }, data.userName), __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 58,
       columnNumber: 7
     }
-  }, __jsx("input", {
-    value: newMessageText,
-    onChange: function onChange(e) {
-      return setNewMessageText(e.target.value);
-    },
+  }, isReady ? "Connected" : "Loading..."), __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 59,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Chat_ChatBox__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    messages: messages,
+    onSendMessage: sendMessageClick,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60,
       columnNumber: 9
     }
-  }), __jsx("button", {
-    onClick: function onClick() {
-      return sendMessageClick();
-    },
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 53,
-      columnNumber: 9
-    }
-  }, "Salji")), __jsx("div", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 55,
-      columnNumber: 7
-    }
-  }, messages.map(function (message) {
-    return __jsx("div", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 57,
-        columnNumber: 11
-      }
-    }, "(", message.id, ") ", message.text);
   })));
 };
 
@@ -2272,19 +2842,19 @@ var Index = function Index() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Faleksandartoplek%2FDocuments%2Fjamb%2Fjambapp%2Fpages%2Findex.jsx! */"./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Faleksandartoplek%2FDocuments%2Fjamb%2Fjambapp%2Fpages%2Findex.jsx!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Faleksandartoplek%2FDocuments%2Fjamb%2Fjambapp%2Fpages%2Findex.jsx! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Faleksandartoplek%2FDocuments%2Fjamb%2Fjambapp%2Fpages%2Findex.jsx!./");
 
 
 /***/ }),
 
-/***/ "dll-reference dll_39c7cba8761da30fa636":
+/***/ "dll-reference dll_2adc2403d89adc16ead0":
 /*!*******************************************!*\
-  !*** external "dll_39c7cba8761da30fa636" ***!
+  !*** external "dll_2adc2403d89adc16ead0" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_39c7cba8761da30fa636;
+module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 

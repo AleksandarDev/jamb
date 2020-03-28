@@ -93,6 +93,123 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Chat/ChatBox.jsx":
+/*!*************************************!*\
+  !*** ./components/Chat/ChatBox.jsx ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChatBox.module.scss */ "./components/Chat/ChatBox.module.scss");
+/* harmony import */ var _ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/Users/aleksandartoplek/Documents/jamb/jambapp/components/Chat/ChatBox.jsx";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const ChatBox = props => {
+  const {
+    messages,
+    onSendMessage
+  } = props;
+  const {
+    0: messageText,
+    1: setMessageText
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
+  return __jsx("div", {
+    className: _ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.root,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 9
+    }
+  }, __jsx("ul", {
+    className: _ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.list,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 13
+    }
+  }, messages.map(message => __jsx("li", {
+    key: message.id,
+    className: _ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.messageBlock,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 21
+    }
+  }, __jsx("span", {
+    className: _ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.messageUser,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 25
+    }
+  }, message.sender), __jsx("span", {
+    className: _ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.messageContent,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 25
+    }
+  }, message.text)))), __jsx("div", {
+    className: _ChatBox_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.inputContainer,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 13
+    }
+  }, __jsx("input", {
+    value: messageText,
+    onChange: e => setMessageText(e.target.value),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 17
+    }
+  }), __jsx("button", {
+    onClick: () => onSendMessage(messageText),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 17
+    }
+  }, "Send")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ChatBox);
+
+/***/ }),
+
+/***/ "./components/Chat/ChatBox.module.scss":
+/*!*********************************************!*\
+  !*** ./components/Chat/ChatBox.module.scss ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// Exports
+module.exports = {
+	"root": "ChatBox_root__1Ovyr",
+	"messageBlock": "ChatBox_messageBlock__8xkRO",
+	"messageUser": "ChatBox_messageUser__26ol0"
+};
+
+/***/ }),
+
 /***/ "./pages/index.jsx":
 /*!*************************!*\
   !*** ./pages/index.jsx ***!
@@ -106,12 +223,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_Chat_ChatBox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Chat/ChatBox */ "./components/Chat/ChatBox.jsx");
 var _jsxFileName = "/Users/aleksandartoplek/Documents/jamb/jambapp/pages/index.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
+
+
+function uuidv4() {
+  return 'xxxxxxxx'.replace(/[xy]/g, function (c) {
+    var r = Math.random() * 16 | 0,
+        v = c == 'x' ? r : r & 0x3 | 0x8;
+    return v.toString(16);
+  });
+}
+
 const data = {
-  userName: "userName"
+  userName: "guest-" + uuidv4()
 };
 const apiBaseUrl = "https://jamb.azurewebsites.net";
 
@@ -123,14 +251,13 @@ const Index = () => {
   const {
     0: messages,
     1: setMessages
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(new Array());
-  const {
-    0: newMessageText,
-    1: setNewMessageText
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('');
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([{
+    sender: "test",
+    text: 'bla bla'
+  }]);
 
-  const sendMessageClick = () => {
-    sendMessage(data.userName, newMessageText);
+  const sendMessageClick = messageText => {
+    sendMessage(data.userName, messageText);
   };
 
   function sendMessage(sender, messageText) {
@@ -143,8 +270,7 @@ const Index = () => {
   let counter = 0;
 
   function newMessage(message) {
-    message.id = counter++; // vue transitions need an id
-
+    message.id = counter++;
     messages.unshift(message);
     setMessages([...messages]);
   }
@@ -162,62 +288,47 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 55,
       columnNumber: 5
     }
   }, __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 56,
       columnNumber: 7
     }
-  }, "Jamb"), __jsx("div", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50,
-      columnNumber: 7
-    }
-  }, isReady ? "Spojen" : "Spajanje..."), __jsx("div", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 51,
-      columnNumber: 7
-    }
-  }, __jsx("input", {
-    value: newMessageText,
-    onChange: e => setNewMessageText(e.target.value),
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52,
-      columnNumber: 9
-    }
-  }), __jsx("button", {
-    onClick: () => sendMessageClick(),
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 53,
-      columnNumber: 9
-    }
-  }, "Salji")), __jsx("div", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 55,
-      columnNumber: 7
-    }
-  }, messages.map(message => __jsx("div", {
+  }, "JAMB"), __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 57,
-      columnNumber: 11
+      columnNumber: 7
     }
-  }, "(", message.id, ") ", message.text))));
+  }, data.userName), __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58,
+      columnNumber: 7
+    }
+  }, isReady ? "Connected" : "Loading..."), __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Chat_ChatBox__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    messages: messages,
+    onSendMessage: sendMessageClick,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60,
+      columnNumber: 9
+    }
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);

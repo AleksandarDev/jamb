@@ -1,9 +1,38 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/runtime/amp.js"],{
 
-/***/ "./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/build/polyfills/fetch/index.js":
-/*!***********************************************************************************************************************************************!*\
-  !*** ./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/build/polyfills/fetch/index.js ***!
-  \***********************************************************************************************************************************************/
+/***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+
+module.exports = _interopRequireDefault;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/regenerator/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
+
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/build/polyfills/fetch/index.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/next/dist/build/polyfills/fetch/index.js ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12,29 +41,29 @@
 
 /***/ }),
 
-/***/ "./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/client/dev/amp-dev.js":
-/*!**************************************************************************************************************************************!*\
-  !*** ./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/client/dev/amp-dev.js ***!
-  \**************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/client/dev/amp-dev.js":
+/*!******************************************************!*\
+  !*** ./node_modules/next/dist/client/dev/amp-dev.js ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _regeneratorRuntime = __webpack_require__(/*! ./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/regenerator */ "./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/regenerator/index.js");
+var _regeneratorRuntime = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
-var _unfetch = _interopRequireDefault(__webpack_require__(/*! unfetch */ "./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/build/polyfills/fetch/index.js"));
+var _unfetch = _interopRequireDefault(__webpack_require__(/*! unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js"));
 
-var _eventSourcePolyfill = _interopRequireDefault(__webpack_require__(/*! ./event-source-polyfill */ "./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/client/dev/event-source-polyfill.js"));
+var _eventSourcePolyfill = _interopRequireDefault(__webpack_require__(/*! ./event-source-polyfill */ "./node_modules/next/dist/client/dev/event-source-polyfill.js"));
 
-var _eventsource = __webpack_require__(/*! ./error-overlay/eventsource */ "./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/client/dev/error-overlay/eventsource.js");
+var _eventsource = __webpack_require__(/*! ./error-overlay/eventsource */ "./node_modules/next/dist/client/dev/error-overlay/eventsource.js");
 
-var _onDemandEntriesUtils = __webpack_require__(/*! ./on-demand-entries-utils */ "./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/client/dev/on-demand-entries-utils.js");
+var _onDemandEntriesUtils = __webpack_require__(/*! ./on-demand-entries-utils */ "./node_modules/next/dist/client/dev/on-demand-entries-utils.js");
 
-var _fouc = __webpack_require__(/*! ./fouc */ "./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/client/dev/fouc.js");
+var _fouc = __webpack_require__(/*! ./fouc */ "./node_modules/next/dist/client/dev/fouc.js");
 /* globals __webpack_hash__ */
 
 
@@ -152,10 +181,10 @@ function tryApplyUpdates() {
 
 /***/ }),
 
-/***/ "./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/client/dev/error-overlay/eventsource.js":
-/*!********************************************************************************************************************************************************!*\
-  !*** ./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/client/dev/error-overlay/eventsource.js ***!
-  \********************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/client/dev/error-overlay/eventsource.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/next/dist/client/dev/error-overlay/eventsource.js ***!
+  \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -239,22 +268,22 @@ function getEventSourceWrapper(options) {
 
 /***/ }),
 
-/***/ "./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/client/dev/event-source-polyfill.js":
-/*!****************************************************************************************************************************************************!*\
-  !*** ./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/client/dev/event-source-polyfill.js ***!
-  \****************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/client/dev/event-source-polyfill.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/next/dist/client/dev/event-source-polyfill.js ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
 exports.__esModule = true;
 exports["default"] = void 0;
 
-var _unfetch = _interopRequireDefault(__webpack_require__(/*! unfetch */ "./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/build/polyfills/fetch/index.js"));
+var _unfetch = _interopRequireDefault(__webpack_require__(/*! unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js"));
 /* eslint-disable */
 // Improved version of https://github.com/Yaffle/EventSource/
 // Available under MIT License (MIT)
@@ -1188,10 +1217,10 @@ exports["default"] = _default;
 
 /***/ }),
 
-/***/ "./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/client/dev/fouc.js":
-/*!***********************************************************************************************************************************!*\
-  !*** ./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/client/dev/fouc.js ***!
-  \***********************************************************************************************************************************/
+/***/ "./node_modules/next/dist/client/dev/fouc.js":
+/*!***************************************************!*\
+  !*** ./node_modules/next/dist/client/dev/fouc.js ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1219,26 +1248,26 @@ function displayContent(callback) {
 
 /***/ }),
 
-/***/ "./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/client/dev/on-demand-entries-utils.js":
-/*!******************************************************************************************************************************************************!*\
-  !*** ./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/client/dev/on-demand-entries-utils.js ***!
-  \******************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/client/dev/on-demand-entries-utils.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/next/dist/client/dev/on-demand-entries-utils.js ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
 exports.__esModule = true;
 exports.closePing = closePing;
 exports.setupPing = setupPing;
 exports.currentPage = void 0;
 
-var _unfetch = _interopRequireDefault(__webpack_require__(/*! unfetch */ "./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/build/polyfills/fetch/index.js"));
+var _unfetch = _interopRequireDefault(__webpack_require__(/*! unfetch */ "./node_modules/next/dist/build/polyfills/fetch/index.js"));
 
-var _eventsource = __webpack_require__(/*! ./error-overlay/eventsource */ "./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/client/dev/error-overlay/eventsource.js");
+var _eventsource = __webpack_require__(/*! ./error-overlay/eventsource */ "./node_modules/next/dist/client/dev/error-overlay/eventsource.js");
 /* global location */
 
 
@@ -1289,39 +1318,10 @@ function setupPing(assetPrefix, pathnameFn, retry) {
 
 /***/ }),
 
-/***/ "./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/interopRequireDefault.js":
-/*!****************************************************************************************************************************!*\
-  !*** ./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
-  \****************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
-
-module.exports = _interopRequireDefault;
-
-/***/ }),
-
-/***/ "./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/regenerator/index.js":
-/*!****************************************************************************************************************!*\
-  !*** ./.yarn/cache/@babel-runtime-npm-7.7.2-f97af02eaa-1.zip/node_modules/@babel/runtime/regenerator/index.js ***!
-  \****************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! regenerator-runtime */ "./.yarn/cache/regenerator-runtime-npm-0.13.5-290ae86e15-1.zip/node_modules/regenerator-runtime/runtime.js");
-
-
-/***/ }),
-
-/***/ "./.yarn/cache/regenerator-runtime-npm-0.13.5-290ae86e15-1.zip/node_modules/regenerator-runtime/runtime.js":
-/*!*****************************************************************************************************************!*\
-  !*** ./.yarn/cache/regenerator-runtime-npm-0.13.5-290ae86e15-1.zip/node_modules/regenerator-runtime/runtime.js ***!
-  \*****************************************************************************************************************/
+/***/ "./node_modules/regenerator-runtime/runtime.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2058,5 +2058,5 @@ try {
 
 /***/ })
 
-},[["./.yarn/$$virtual/next-virtual-b443429368/0/cache/next-npm-9.3.1-25a6eb45dc-1.zip/node_modules/next/dist/client/dev/amp-dev.js","static/runtime/webpack.js"]]]);
+},[["./node_modules/next/dist/client/dev/amp-dev.js","static/runtime/webpack.js"]]]);
 //# sourceMappingURL=amp.js.map

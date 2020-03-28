@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import ChatBox from '../components/Chat/ChatBox';
+
+function uuidv4() {
+  return 'xxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
 
 const data = {
-  userName: "userName",
+  userName: "guest-" + uuidv4(),
 };
 
 const apiBaseUrl = "https://jamb.azurewebsites.net";
 
 const Index = () => {
   const [isReady, setIsReady] = useState(false);
-  const [messages, setMessages] = useState(new Array());
-  const [newMessageText, setNewMessageText] = useState('');
+  const [messages, setMessages] = useState([{sender:"test", text:'bla bla'}]);
 
-  const sendMessageClick = () => {
-    sendMessage(data.userName, newMessageText);
+  const sendMessageClick = (messageText) => {
+    sendMessage(data.userName, messageText);
   };
 
   function sendMessage(sender, messageText) {
@@ -25,7 +32,7 @@ const Index = () => {
 
   let counter = 0;
   function newMessage(message) {
-    message.id = counter++; // vue transitions need an id
+    message.id = counter++;
     messages.unshift(message);
     setMessages([...messages]);
   }
@@ -46,16 +53,11 @@ const Index = () => {
 
   return (
     <div>
-      <h1>Jamb</h1>
-      <div>{isReady ? "Spojen" : "Spajanje..."}</div>
+      <h1>JAMB</h1>
+      <div>{data.userName}</div>
+      <div>{isReady ? "Connected" : "Loading..."}</div>
       <div>
-        <input value={newMessageText} onChange={(e) => setNewMessageText(e.target.value)} />
-        <button onClick={() => sendMessageClick()}>Salji</button>
-      </div>
-      <div>
-        {messages.map((message) => (
-          <div>({message.id}) {message.text}</div>
-        ))}
+        <ChatBox messages={messages} onSendMessage={sendMessageClick} />
       </div>
     </div>
   );

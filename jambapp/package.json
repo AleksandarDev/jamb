@@ -14,7 +14,8 @@
   "dependencies": {
     "next": "^9.3.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "sass": "^1.26.3"
   },
   "devDependencies": {
     "axios": "^0.19.2"
