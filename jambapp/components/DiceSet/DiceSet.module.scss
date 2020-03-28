@@ -1,17 +1,22 @@
 .root {
-    padding: 4px;
-    background-color: #ffc3b0;
+  padding: 4px;
 }
 
 .diceContainer {
-    padding: 4px;
-    display: inline-block;    
+  padding: 4px;
 }
 
-.dice {
-    display: inline-block;
+.throwIndicatorStep {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 0.7rem;
+  text-align: center;
+  background-color: #efefef;
 }
 
-.throwButton {
-    display: inline-block;
+.throwIndicatorStepUsed {
+  background-color: rgba(255, 255, 255, 0.3);
 }

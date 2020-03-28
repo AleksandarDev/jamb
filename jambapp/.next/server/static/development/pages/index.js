@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1643,6 +1643,7 @@ module.exports = {
 	"tableContainer": "Board_tableContainer__11JPn",
 	"jambTable": "Board_jambTable__2XNGH",
 	"score": "Board_score__36vPV",
+	"scoreLarge": "Board_scoreLarge__1z0GB",
 	"sum": "Board_sum__3Cd39"
 };
 
@@ -1791,23 +1792,54 @@ const Dice = props => {
     value,
     isSelected
   } = props;
+  let diceValueStyle = null;
+
+  switch (value) {
+    case 1:
+      diceValueStyle = _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceValue1;
+      break;
+
+    case 2:
+      diceValueStyle = _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceValue2;
+      break;
+
+    case 3:
+      diceValueStyle = _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceValue3;
+      break;
+
+    case 4:
+      diceValueStyle = _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceValue4;
+      break;
+
+    case 5:
+      diceValueStyle = _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceValue5;
+      break;
+
+    case 6:
+      diceValueStyle = _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceValue6;
+      break;
+
+    default:
+      break;
+  }
+
   return __jsx("div", {
     className: clsx__WEBPACK_IMPORTED_MODULE_1___default()(isSelected && _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.selected, _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.selectionContainer),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
-      columnNumber: 9
+      lineNumber: 33,
+      columnNumber: 5
     }
   }, __jsx("div", {
-    className: _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.root,
+    className: clsx__WEBPACK_IMPORTED_MODULE_1___default()(_Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.root, diceValueStyle, _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceValue),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 13
+      lineNumber: 36,
+      columnNumber: 7
     }
-  }, value));
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Dice);
@@ -1825,7 +1857,14 @@ const Dice = props => {
 module.exports = {
 	"root": "Dice_root__2XBSj",
 	"selectionContainer": "Dice_selectionContainer___RHmx",
-	"selected": "Dice_selected__3Y0D9"
+	"selected": "Dice_selected__3Y0D9",
+	"diceValue1": "Dice_diceValue1__1QWIP",
+	"diceValue2": "Dice_diceValue2__1Rm4t",
+	"diceValue3": "Dice_diceValue3__2-R8d",
+	"diceValue4": "Dice_diceValue4__2PGHg",
+	"diceValue5": "Dice_diceValue5__2Y23A",
+	"diceValue6": "Dice_diceValue6__2NtPW",
+	"diceValue": "Dice_diceValue__V4uRP"
 };
 
 /***/ }),
@@ -1844,8 +1883,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Dice_Dice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Dice/Dice */ "./components/Dice/Dice.jsx");
 /* harmony import */ var _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DiceSet.module.scss */ "./components/DiceSet/DiceSet.module.scss");
 /* harmony import */ var _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! clsx */ "clsx");
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(clsx__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__);
 var _jsxFileName = "/Users/aleksandartoplek/Documents/jamb/jambapp/components/DiceSet/DiceSet.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
 
 
 
@@ -1906,38 +1951,34 @@ const DiceSet = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
-      columnNumber: 9
+      lineNumber: 56,
+      columnNumber: 5
     }
-  }, __jsx("div", {
-    className: _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.throwIndicator,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 55,
-      columnNumber: 13
-    }
-  }, Array(3).fill(1).map((item, i) => __jsx("div", {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
+    container: true,
+    direction: "column",
+    spacing: 2,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 57,
-      columnNumber: 21
+      columnNumber: 7
     }
-  }, i + 1)), __jsx("div", {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
+    item: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
-      columnNumber: 17
+      lineNumber: 58,
+      columnNumber: 9
     }
-  }, "test")), __jsx("div", {
+  }, __jsx("div", {
     className: _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.dice,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61,
-      columnNumber: 13
+      lineNumber: 59,
+      columnNumber: 11
     }
   }, diceValues.map((diceValue, i) => __jsx("div", {
     className: _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceContainer,
@@ -1945,30 +1986,82 @@ const DiceSet = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63,
-      columnNumber: 21
+      lineNumber: 61,
+      columnNumber: 15
     }
   }, __jsx(_Dice_Dice__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    key: 'dice' + i,
+    key: "dice" + i,
     value: diceValue.value,
     isSelected: diceValue.isSelected,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64,
-      columnNumber: 25
+      lineNumber: 65,
+      columnNumber: 17
     }
-  })))), __jsx("button", {
+  }))))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
+    item: true,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74,
+      columnNumber: 9
+    }
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
+    container: true,
+    spacing: 1,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75,
+      columnNumber: 11
+    }
+  }, Array(3).fill(1).map((item, i) => __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
+    item: true,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79,
+      columnNumber: 17
+    }
+  }, __jsx("span", {
+    className: clsx__WEBPACK_IMPORTED_MODULE_3___default()(_DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.throwIndicatorStep, throwCount > i && _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.throwIndicatorStepUsed),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80,
+      columnNumber: 19
+    }
+  }, i + 1))))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
+    item: true,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92,
+      columnNumber: 9
+    }
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Button"], {
+    variant: "contained",
     className: _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.throwButton,
     onClick: onThrow,
     disabled: !canThrow,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68,
+      lineNumber: 93,
+      columnNumber: 11
+    }
+  }, __jsx("img", {
+    src: "/static/throw.png",
+    width: 30,
+    height: 30,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99,
       columnNumber: 13
     }
-  }, "Baci"));
+  })))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (DiceSet);
@@ -1986,8 +2079,8 @@ const DiceSet = props => {
 module.exports = {
 	"root": "DiceSet_root__1IzrT",
 	"diceContainer": "DiceSet_diceContainer__2F8Z6",
-	"dice": "DiceSet_dice__22KUI",
-	"throwButton": "DiceSet_throwButton__2raCz"
+	"throwIndicatorStep": "DiceSet_throwIndicatorStep__zENPt",
+	"throwIndicatorStepUsed": "DiceSet_throwIndicatorStepUsed__UcVBH"
 };
 
 /***/ }),
@@ -2008,6 +2101,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Chat_ChatBox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Chat/ChatBox */ "./components/Chat/ChatBox.jsx");
 /* harmony import */ var _components_Board_Board__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Board/Board */ "./components/Board/Board.jsx");
 /* harmony import */ var _components_DiceSet_DiceSet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/DiceSet/DiceSet */ "./components/DiceSet/DiceSet.jsx");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
+/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _index_module_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./index.module.scss */ "./pages/index.module.scss");
+/* harmony import */ var _index_module_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_index_module_scss__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/Users/aleksandartoplek/Documents/jamb/jambapp/pages/index.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -2016,10 +2113,12 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
+
 function uuidv4() {
-  return 'xxxxxxxx'.replace(/[xy]/g, function (c) {
+  return "xxxxxxxx".replace(/[xy]/g, function (c) {
     var r = Math.random() * 16 | 0,
-        v = c == 'x' ? r : r & 0x3 | 0x8;
+        v = c == "x" ? r : r & 0x3 | 0x8;
     return v.toString(16);
   });
 }
@@ -2039,7 +2138,7 @@ const Index = () => {
     1: setMessages
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([{
     sender: "test",
-    text: 'bla bla'
+    text: "bla bla"
   }]);
 
   const sendMessageClick = messageText => {
@@ -2063,86 +2162,89 @@ const Index = () => {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     const connection = new window.signalR.HubConnectionBuilder().withUrl(`${apiBaseUrl}/api`).configureLogging(window.signalR.LogLevel.Information).build();
-    connection.on('newMessage', newMessage);
-    connection.onclose(() => console.log('disconnected'));
+    connection.on("newMessage", newMessage);
+    connection.onclose(() => console.log("disconnected"));
     connection.start().then(() => setIsReady(true)).catch(err => {
       console.error(err);
       setIsReady(false);
     });
   }, []);
   return __jsx("div", {
+    className: _index_module_scss__WEBPACK_IMPORTED_MODULE_6___default.a.root,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 68,
       columnNumber: 5
     }
-  }, __jsx("h1", {
+  }, __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 71,
       columnNumber: 7
     }
-  }, "JAMB"), __jsx("div", {
+  }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
+    container: true,
+    direction: "row",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 74,
       columnNumber: 7
     }
-  }, data.userName), __jsx("div", {
+  }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
+    item: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
-      columnNumber: 7
-    }
-  }, isReady ? "Connected" : "Loading..."), __jsx("div", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61,
-      columnNumber: 7
-    }
-  }, __jsx(_components_Chat_ChatBox__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    messages: messages,
-    onSendMessage: sendMessageClick,
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62,
+      lineNumber: 75,
       columnNumber: 9
-    }
-  })), __jsx("div", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64,
-      columnNumber: 7
     }
   }, __jsx(_components_Board_Board__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65,
-      columnNumber: 7
+      lineNumber: 76,
+      columnNumber: 11
     }
-  }), __jsx(_components_DiceSet_DiceSet__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  })), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
+    item: true,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66,
-      columnNumber: 7
+      lineNumber: 78,
+      columnNumber: 9
     }
-  })));
+  }, __jsx(_components_DiceSet_DiceSet__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79,
+      columnNumber: 11
+    }
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
 
-/***/ 3:
+/***/ "./pages/index.module.scss":
+/*!*********************************!*\
+  !*** ./pages/index.module.scss ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// Exports
+module.exports = {
+	"root": "index_root__1BJ3w"
+};
+
+/***/ }),
+
+/***/ 4:
 /*!*******************************!*\
   !*** multi ./pages/index.jsx ***!
   \*******************************/
@@ -2151,6 +2253,17 @@ const Index = () => {
 
 module.exports = __webpack_require__(/*! /Users/aleksandartoplek/Documents/jamb/jambapp/pages/index.jsx */"./pages/index.jsx");
 
+
+/***/ }),
+
+/***/ "@material-ui/core":
+/*!************************************!*\
+  !*** external "@material-ui/core" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core");
 
 /***/ }),
 

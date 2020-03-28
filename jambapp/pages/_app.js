@@ -1,8 +1,24 @@
-import './reset.css';
-import './index.scss';
+import Head from "next/head";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { ThemeProvider } from "@material-ui/core/styles";
+import theme from "../src/theme";
 
 function MyApp({ Component, pageProps }) {
-    return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <title>My page</title>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
+  );
 }
 
 // Only uncomment this method if you have blocking data requirements for
@@ -17,4 +33,4 @@ function MyApp({ Component, pageProps }) {
 //   return { ...appProps }
 // }
 
-export default MyApp
+export default MyApp;

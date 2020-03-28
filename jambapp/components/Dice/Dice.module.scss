@@ -1,17 +1,40 @@
+$diceSize: 50px;
+
 .root {
-    border: 2px solid black;
-    border-radius: 4px;
-    padding: 12px;
-    padding-left: 16px;
-    padding-right: 16px;
-    display: inline-block;
+  display: inline-block;
+  width: $diceSize;
+  height: $diceSize;
 }
 
 .selectionContainer {
-    padding: 4px;
+  padding: 4px;
 }
 
 .selected {
-    border: 2px dashed red;
-    padding: 2px;
+  border: 2px dashed white;
+  padding: 2px;
+}
+
+.diceValue1 {
+  background-image: url("/static/one.png");
+}
+.diceValue2 {
+  background-image: url("/static/two.png");
+}
+.diceValue3 {
+  background-image: url("/static/three.png");
+}
+.diceValue4 {
+  background-image: url("/static/four.png");
+}
+.diceValue5 {
+  background-image: url("/static/five.png");
+}
+.diceValue6 {
+  background-image: url("/static/six.png");
+}
+
+.diceValue {
+  background-size: $diceSize $diceSize;
+  background-repeat: no-repeat;
 }
