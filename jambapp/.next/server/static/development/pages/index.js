@@ -93,6 +93,1561 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Board/Board.jsx":
+/*!************************************!*\
+  !*** ./components/Board/Board.jsx ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Board_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Board.module.scss */ "./components/Board/Board.module.scss");
+/* harmony import */ var _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Board_module_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! clsx */ "clsx");
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(clsx__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/aleksandartoplek/Documents/jamb/jambapp/components/Board/Board.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+const Board = props => {
+  return __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.tableContainer,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 9
+    }
+  }, __jsx("table", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.jambTable,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 9
+    }
+  }, __jsx("tbody", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 13
+    }
+  }, __jsx("tr", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 17
+    }
+  }), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: clsx__WEBPACK_IMPORTED_MODULE_2___default()(_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.scoreLarge),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 21
+    }
+  }, "\u2B07")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: clsx__WEBPACK_IMPORTED_MODULE_2___default()(_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.scoreLarge),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 21
+    }
+  }, "\u2B06")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: clsx__WEBPACK_IMPORTED_MODULE_2___default()(_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.scoreLarge),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 21
+    }
+  }, "\u2B07\u2B06")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 21
+    }
+  }, "NAJAVA"))), __jsx("tr", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: clsx__WEBPACK_IMPORTED_MODULE_2___default()(_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.scoreLarge),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 21
+    }
+  }, "1")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 21
+    }
+  }))), __jsx("tr", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: clsx__WEBPACK_IMPORTED_MODULE_2___default()(_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.scoreLarge),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 21
+    }
+  }, "2")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 21
+    }
+  }))), __jsx("tr", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: clsx__WEBPACK_IMPORTED_MODULE_2___default()(_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.scoreLarge),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32,
+      columnNumber: 21
+    }
+  }, "3")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 21
+    }
+  }))), __jsx("tr", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: clsx__WEBPACK_IMPORTED_MODULE_2___default()(_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.scoreLarge),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39,
+      columnNumber: 21
+    }
+  }, "4")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43,
+      columnNumber: 21
+    }
+  }))), __jsx("tr", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: clsx__WEBPACK_IMPORTED_MODULE_2___default()(_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.scoreLarge),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
+      columnNumber: 21
+    }
+  }, "5")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50,
+      columnNumber: 21
+    }
+  }))), __jsx("tr", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: clsx__WEBPACK_IMPORTED_MODULE_2___default()(_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.scoreLarge),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53,
+      columnNumber: 21
+    }
+  }, "6")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57,
+      columnNumber: 21
+    }
+  }))), __jsx("tr", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.sum,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: clsx__WEBPACK_IMPORTED_MODULE_2___default()(_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.scoreLarge),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60,
+      columnNumber: 21
+    }
+  }, "\u2211")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 21
+    }
+  }))), __jsx("tr", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68,
+      columnNumber: 21
+    }
+  }, "MAX")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72,
+      columnNumber: 21
+    }
+  }))), __jsx("tr", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75,
+      columnNumber: 21
+    }
+  }, "MIN")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79,
+      columnNumber: 21
+    }
+  }))), __jsx("tr", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.sum,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 82,
+      columnNumber: 21
+    }
+  }, "RAZLIKA x1")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 85,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 86,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 87,
+      columnNumber: 21
+    }
+  }))), __jsx("tr", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 90,
+      columnNumber: 21
+    }
+  }, "2 PARA")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94,
+      columnNumber: 21
+    }
+  }))), __jsx("tr", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 96,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 97,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 97,
+      columnNumber: 21
+    }
+  }, "SKALA")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101,
+      columnNumber: 21
+    }
+  }))), __jsx("tr", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 103,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 104,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 104,
+      columnNumber: 21
+    }
+  }, "FULL")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 105,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 105,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 106,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 106,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 107,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 107,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 108,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 108,
+      columnNumber: 21
+    }
+  }))), __jsx("tr", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 110,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 111,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 111,
+      columnNumber: 21
+    }
+  }, "POKER")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 112,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 112,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 113,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 113,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 114,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 114,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 115,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 115,
+      columnNumber: 21
+    }
+  }))), __jsx("tr", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 117,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 118,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 118,
+      columnNumber: 21
+    }
+  }, "JAMB")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 119,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 119,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 120,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 120,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 121,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 121,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 122,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 122,
+      columnNumber: 21
+    }
+  }))), __jsx("tr", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.sum,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 124,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 125,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: clsx__WEBPACK_IMPORTED_MODULE_2___default()(_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.scoreLarge),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 125,
+      columnNumber: 21
+    }
+  }, "\u2211")), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 126,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 126,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 127,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 127,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 128,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 128,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 129,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 129,
+      columnNumber: 21
+    }
+  })), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 130,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 130,
+      columnNumber: 21
+    }
+  }))), __jsx("tr", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.sum,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 132,
+      columnNumber: 13
+    }
+  }, __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 133,
+      columnNumber: 17
+    }
+  }), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 134,
+      columnNumber: 17
+    }
+  }), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 135,
+      columnNumber: 17
+    }
+  }), __jsx("td", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 136,
+      columnNumber: 17
+    }
+  }), __jsx("td", {
+    colSpan: "2",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 137,
+      columnNumber: 17
+    }
+  }, __jsx("div", {
+    className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 137,
+      columnNumber: 33
+    }
+  }))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Board);
+
+/***/ }),
+
+/***/ "./components/Board/Board.module.scss":
+/*!********************************************!*\
+  !*** ./components/Board/Board.module.scss ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// Exports
+module.exports = {
+	"tableContainer": "Board_tableContainer__11JPn",
+	"jambTable": "Board_jambTable__2XNGH",
+	"score": "Board_score__36vPV",
+	"sum": "Board_sum__3Cd39"
+};
+
+/***/ }),
+
 /***/ "./components/Chat/ChatBox.jsx":
 /*!*************************************!*\
   !*** ./components/Chat/ChatBox.jsx ***!
@@ -210,6 +1765,233 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./components/Dice/Dice.jsx":
+/*!**********************************!*\
+  !*** ./components/Dice/Dice.jsx ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! clsx */ "clsx");
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(clsx__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Dice.module.scss */ "./components/Dice/Dice.module.scss");
+/* harmony import */ var _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Dice_module_scss__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/aleksandartoplek/Documents/jamb/jambapp/components/Dice/Dice.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+const Dice = props => {
+  const {
+    value,
+    isSelected
+  } = props;
+  return __jsx("div", {
+    className: clsx__WEBPACK_IMPORTED_MODULE_1___default()(isSelected && _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.selected, _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.selectionContainer),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.root,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 13
+    }
+  }, value));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Dice);
+
+/***/ }),
+
+/***/ "./components/Dice/Dice.module.scss":
+/*!******************************************!*\
+  !*** ./components/Dice/Dice.module.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// Exports
+module.exports = {
+	"root": "Dice_root__2XBSj",
+	"selectionContainer": "Dice_selectionContainer___RHmx",
+	"selected": "Dice_selected__3Y0D9"
+};
+
+/***/ }),
+
+/***/ "./components/DiceSet/DiceSet.jsx":
+/*!****************************************!*\
+  !*** ./components/DiceSet/DiceSet.jsx ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Dice_Dice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Dice/Dice */ "./components/Dice/Dice.jsx");
+/* harmony import */ var _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DiceSet.module.scss */ "./components/DiceSet/DiceSet.module.scss");
+/* harmony import */ var _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/aleksandartoplek/Documents/jamb/jambapp/components/DiceSet/DiceSet.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+const DiceSet = props => {
+  const {
+    0: diceValues,
+    1: setDiceValues
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([{
+    value: 1,
+    isSelected: false
+  }, {
+    value: 1,
+    isSelected: false
+  }, {
+    value: 1,
+    isSelected: false
+  }, {
+    value: 1,
+    isSelected: false
+  }, {
+    value: 1,
+    isSelected: false
+  }]);
+  const {
+    0: throwCount,
+    1: setThrowCount
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0);
+  const {
+    0: canThrow,
+    1: setCanThrow
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true);
+
+  const onThrow = () => {
+    setCanThrow(throwCount < 2);
+    setThrowCount(throwCount + 1);
+
+    for (let i = 0; i < diceValues.length; i++) {
+      if (!diceValues[i].isSelected) {
+        diceValues[i].value = getRandomInt(6) + 1;
+      }
+    }
+
+    setDiceValues([...diceValues]);
+  };
+
+  const onDiceClick = i => {
+    diceValues[i].isSelected = !diceValues[i].isSelected;
+    setDiceValues([...diceValues]);
+  };
+
+  return __jsx("div", {
+    className: _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.root,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54,
+      columnNumber: 9
+    }
+  }, __jsx("div", {
+    className: _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.throwIndicator,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55,
+      columnNumber: 13
+    }
+  }, Array(3).fill(1).map((item, i) => __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57,
+      columnNumber: 21
+    }
+  }, i + 1)), __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59,
+      columnNumber: 17
+    }
+  }, "test")), __jsx("div", {
+    className: _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.dice,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61,
+      columnNumber: 13
+    }
+  }, diceValues.map((diceValue, i) => __jsx("div", {
+    className: _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceContainer,
+    onClick: () => onDiceClick(i),
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63,
+      columnNumber: 21
+    }
+  }, __jsx(_Dice_Dice__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    key: 'dice' + i,
+    value: diceValue.value,
+    isSelected: diceValue.isSelected,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64,
+      columnNumber: 25
+    }
+  })))), __jsx("button", {
+    className: _DiceSet_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.throwButton,
+    onClick: onThrow,
+    disabled: !canThrow,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68,
+      columnNumber: 13
+    }
+  }, "Baci"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DiceSet);
+
+/***/ }),
+
+/***/ "./components/DiceSet/DiceSet.module.scss":
+/*!************************************************!*\
+  !*** ./components/DiceSet/DiceSet.module.scss ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// Exports
+module.exports = {
+	"root": "DiceSet_root__1IzrT",
+	"diceContainer": "DiceSet_diceContainer__2F8Z6",
+	"dice": "DiceSet_dice__22KUI",
+	"throwButton": "DiceSet_throwButton__2raCz"
+};
+
+/***/ }),
+
 /***/ "./pages/index.jsx":
 /*!*************************!*\
   !*** ./pages/index.jsx ***!
@@ -224,8 +2006,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Chat_ChatBox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Chat/ChatBox */ "./components/Chat/ChatBox.jsx");
+/* harmony import */ var _components_Board_Board__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Board/Board */ "./components/Board/Board.jsx");
+/* harmony import */ var _components_DiceSet_DiceSet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/DiceSet/DiceSet */ "./components/DiceSet/DiceSet.jsx");
 var _jsxFileName = "/Users/aleksandartoplek/Documents/jamb/jambapp/pages/index.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
 
 
 
@@ -288,35 +2074,35 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 57,
       columnNumber: 5
     }
   }, __jsx("h1", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56,
+      lineNumber: 58,
       columnNumber: 7
     }
   }, "JAMB"), __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57,
+      lineNumber: 59,
       columnNumber: 7
     }
   }, data.userName), __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58,
+      lineNumber: 60,
       columnNumber: 7
     }
   }, isReady ? "Connected" : "Loading..."), __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59,
+      lineNumber: 61,
       columnNumber: 7
     }
   }, __jsx(_components_Chat_ChatBox__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -325,8 +2111,29 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60,
+      lineNumber: 62,
       columnNumber: 9
+    }
+  })), __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64,
+      columnNumber: 7
+    }
+  }, __jsx(_components_Board_Board__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65,
+      columnNumber: 7
+    }
+  }), __jsx(_components_DiceSet_DiceSet__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66,
+      columnNumber: 7
     }
   })));
 };
@@ -355,6 +2162,17 @@ module.exports = __webpack_require__(/*! /Users/aleksandartoplek/Documents/jamb/
 /***/ (function(module, exports) {
 
 module.exports = require("axios");
+
+/***/ }),
+
+/***/ "clsx":
+/*!***********************!*\
+  !*** external "clsx" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("clsx");
 
 /***/ }),
 

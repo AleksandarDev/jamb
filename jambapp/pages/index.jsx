@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ChatBox from '../components/Chat/ChatBox';
+import Board from '../components/Board/Board';
+import DiceSet from '../components/DiceSet/DiceSet';
 
 function uuidv4() {
   return 'xxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -58,6 +60,10 @@ const Index = () => {
       <div>{isReady ? "Connected" : "Loading..."}</div>
       <div>
         <ChatBox messages={messages} onSendMessage={sendMessageClick} />
+      </div>
+      <div>
+      <Board />
+      <DiceSet />
       </div>
     </div>
   );
