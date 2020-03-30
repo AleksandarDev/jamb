@@ -22,6 +22,22 @@
     align-items: center;
   }
 
+  .hintZero {
+    color: rgba(0, 0, 0, 0.15);
+  }
+
+  .hint {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .selected {
+    border: 2px dashed rgb(141, 0, 0);
+  }
+
+  .scoreDisabled {
+    color: rgb(194, 116, 116);
+  }
+
   .scoreLarge {
     font-size: 1rem;
   }

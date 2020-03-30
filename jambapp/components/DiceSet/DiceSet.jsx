@@ -3,12 +3,14 @@ import Dice from "../Dice/Dice";
 import styles from "./DiceSet.module.scss";
 import cx from "clsx";
 import { Grid, Button } from "@material-ui/core";
+import { useEffect } from "react";
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
 const DiceSet = props => {
+  const { currentRound, throwIndex, onDiceValueChange } = props;
   const [diceValues, setDiceValues] = useState([
     {
       value: 0,
@@ -31,25 +33,41 @@ const DiceSet = props => {
       isSelected: false
     }
   ]);
-  const [throwCount, setThrowCount] = useState(0);
+
   const [canThrow, setCanThrow] = useState(true);
+  useEffect(() => {
+    setCanThrow(throwIndex < 3);
+  }, [throwIndex]);
 
-  const onThrow = () => {
-    setCanThrow(throwCount < 2);
-    setThrowCount(throwCount + 1);
+  const [round, setRound] = useState(0);
+  const reset = () => {
+    for (let i = 0; i < diceValues.length; i++) {
+      diceValues[i].value = 0;
+      diceValues[i].isSelected = false;
+    }
+    setDiceValues([...diceValues]);
+  };
+  useEffect(() => {
+    if (currentRound != round) {
+      reset();
+    }
+    setRound(currentRound);
+  });
 
+  const handleDiceClick = i => {
+    diceValues[i].isSelected = !diceValues[i].isSelected;
+    setDiceValues([...diceValues]);
+  };
+
+  const handleThrow = () => {
     for (let i = 0; i < diceValues.length; i++) {
       if (!diceValues[i].isSelected) {
         diceValues[i].value = getRandomInt(6) + 1;
       }
     }
-    setDiceValues([...diceValues]);
-  };
-
-  const onDiceClick = i => {
-    diceValues[i].isSelected = !diceValues[i].isSelected;
 
     setDiceValues([...diceValues]);
+    onDiceValueChange(diceValues.map(d => d.value));
   };
 
   return (
@@ -62,7 +80,7 @@ const DiceSet = props => {
           justify="flex-start"
         >
           {diceValues.map((diceValue, i) => (
-            <Grid item onClick={() => onDiceClick(i)}>
+            <Grid item onClick={() => handleDiceClick(i)}>
               <Dice
                 key={"dice" + i}
                 value={diceValue.value}
@@ -81,7 +99,7 @@ const DiceSet = props => {
                 <span
                   className={cx(
                     styles.throwIndicatorStep,
-                    throwCount > i && styles.throwIndicatorStepUsed
+                    throwIndex > i && styles.throwIndicatorStepUsed
                   )}
                 >
                   {i + 1}
@@ -94,7 +112,7 @@ const DiceSet = props => {
         <Button
           variant="contained"
           className={styles.throwButton}
-          onClick={onThrow}
+          onClick={handleThrow}
           disabled={!canThrow}
         >
           <img src="/static/throw.png" width={30} height={30} />

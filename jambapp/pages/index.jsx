@@ -64,6 +64,60 @@ const Index = () => {
       });
   }, []);
 
+  const handleDiceValueChange = newDiceValues => {
+    console.log("Throw", newDiceValues);
+    setBoardValues({
+      ...boardValues,
+      diceValues: newDiceValues,
+      throwIndex: boardValues.throwIndex + 1
+    });
+  };
+
+  const [boardValues, setBoardValues] = useState({
+    numberScores: [
+      [null, null, null, null],
+      [null, null, null, null],
+      [null, null, null, null],
+      [null, null, null, null],
+      [null, null, null, null],
+      [null, null, null, null]
+    ],
+    min: [null, null, null, null],
+    max: [null, null, null, null],
+    twoPairs: [null, null, null, null],
+    scale: [null, null, null, null],
+    full: [null, null, null, null],
+    poker: [null, null, null, null],
+    yamb: [null, null, null, null],
+    downIndex: 0,
+    upIndex: 12,
+    announcementIndex: null,
+    round: 0,
+    throwIndex: 0,
+    diceValues: [0, 0, 0, 0, 0]
+  });
+  const handleBoardValueSet = (action, newBoardValues) => {
+    console.log("Action", action);
+    if (action.value != null) {
+      setBoardValues({
+        ...newBoardValues,
+        downIndex: newBoardValues.downIndex + (action.column === 0 ? 1 : 0),
+        upIndex: newBoardValues.upIndex - (action.column === 1 ? 1 : 0),
+        announcementIndex: null,
+        throwIndex: 0,
+        round: boardValues.round + 1,
+        diceValues: [0, 0, 0, 0, 0]
+      });
+    } else if (action.isAnnouncement) {
+      setBoardValues({
+        ...newBoardValues,
+        announcementIndex: action.row
+      });
+    } else {
+      console.warning("Ignored user action");
+    }
+  };
+
   return (
     <div className={styles.root}>
       {/* <div>{data.userName}</div> */}
@@ -73,10 +127,17 @@ const Index = () => {
       </div>
       <Grid container direction="row">
         <Grid item>
-          <Board />
+          <Board
+            boardValues={boardValues}
+            onBoardValuesChanged={handleBoardValueSet}
+          />
         </Grid>
         <Grid item>
-          <DiceSet />
+          <DiceSet
+            currentRound={boardValues.round}
+            throwIndex={boardValues.throwIndex}
+            onDiceValueChange={handleDiceValueChange}
+          />
         </Grid>
       </Grid>
     </div>
