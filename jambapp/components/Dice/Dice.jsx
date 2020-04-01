@@ -3,7 +3,7 @@ import cx from "clsx";
 import styles from "./Dice.module.scss";
 
 const Dice = props => {
-  const { value, isSelected } = props;
+  const { value, isSelected, isRolling } = props;
 
   let diceValueStyle = styles.diceValue0;
   switch (value) {
@@ -29,11 +29,21 @@ const Dice = props => {
       break;
   }
 
+  const rollingStyle = styles[`rollingStyle${Math.floor(Math.random() * 4)}`];
+
   return (
     <div
       className={cx(isSelected && styles.selected, styles.selectionContainer)}
     >
-      <div className={cx(styles.root, diceValueStyle, styles.diceValue)}></div>
+      <div
+        className={cx(
+          styles.root,
+          styles.diceValue,
+          diceValueStyle,
+          !isSelected && isRolling && styles.rolling,
+          !isSelected && isRolling && rollingStyle
+        )}
+      ></div>
     </div>
   );
 };

@@ -6,7 +6,7 @@ const ScoreCell = props => (
   <td>
     <div
       onClick={e =>
-        !props.value && props.hintValue != null && props.onSelect(e)
+        props.value == null && props.hintValue != null && props.onSelect(e)
       }
       className={cx(
         styles.score,
@@ -193,6 +193,14 @@ const Board = props => {
     );
 
   let rowIndex = 0;
+  const diceStyles = [
+    styles.dice1,
+    styles.dice2,
+    styles.dice3,
+    styles.dice4,
+    styles.dice5,
+    styles.dice6
+  ];
 
   return (
     <div className={styles.tableContainer}>
@@ -218,7 +226,7 @@ const Board = props => {
             .map((_, i) => (
               <ScoreRow
                 index={rowIndex++}
-                label={i + 1}
+                label={<div className={cx(styles.dice, diceStyles[i])}></div>}
                 values={boardValues.numberScores[i]}
                 hintValues={Array(4).fill(numberScores[i])}
                 boardState={boardState}
@@ -228,7 +236,6 @@ const Board = props => {
           <ScoreRow
             disabled
             label="∑"
-            summarize
             className={styles.sum}
             values={numbersSum}
           />
@@ -253,7 +260,6 @@ const Board = props => {
           <ScoreRow
             disabled
             label="RAZLIKA X1"
-            summarize
             smallLabel
             className={styles.sum}
             values={minMaxSum}
@@ -307,11 +313,9 @@ const Board = props => {
             disabled
             label="∑"
             className={styles.sum}
-            summarize
             values={specialSum}
           />
           <tr className={styles.sum}>
-            <td></td>
             <td></td>
             <td></td>
             <td></td>

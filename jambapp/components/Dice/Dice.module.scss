@@ -13,7 +13,7 @@ $diceSize: 50px;
 
 .selected {
   border: 2px dashed white;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 2px;
 }
 
@@ -43,4 +43,164 @@ $diceSize: 50px;
   background-size: $diceSize $diceSize;
   background-repeat: no-repeat;
   height: $diceSize;
+}
+
+$shakeMagnitude: 2px;
+@keyframes shake1 {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-$shakeMagnitude, 0, 0);
+    transform: translate3d(-$shakeMagnitude, 0, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d($shakeMagnitude, 0, 0);
+    transform: translate3d($shakeMagnitude, 0, 0);
+  }
+}
+@keyframes shake2 {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  15%,
+  35%,
+  55%,
+  75%,
+  95% {
+    -webkit-transform: translate3d($shakeMagnitude, 0, 0);
+    transform: translate3d($shakeMagnitude, 0, 0);
+  }
+  25%,
+  45%,
+  65%,
+  85% {
+    -webkit-transform: translate3d(-$shakeMagnitude, 0, 0);
+    transform: translate3d(-$shakeMagnitude, 0, 0);
+  }
+}
+
+@keyframes enlarge {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  10% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse0 {
+  from {
+    background-image: url("/static/one.png");
+  }
+  20% {
+    background-image: url("/static/five.png");
+  }
+  40% {
+    background-image: url("/static/six.png");
+  }
+  70% {
+    background-image: url("/static/five.png");
+  }
+  to {
+    background-image: url("/static/six.png");
+  }
+}
+
+@keyframes pulse1 {
+  from {
+    background-image: url("/static/two.png");
+  }
+  10% {
+    background-image: url("/static/three.png");
+  }
+  30% {
+    background-image: url("/static/four.png");
+  }
+  50% {
+    background-image: url("/static/one.png");
+  }
+  to {
+    background-image: url("/static/one.png");
+  }
+}
+
+@keyframes pulse2 {
+  from {
+    background-image: url("/static/five.png");
+  }
+  20% {
+    background-image: url("/static/one.png");
+  }
+  40% {
+    background-image: url("/static/four.png");
+  }
+  60% {
+    background-image: url("/static/five.png");
+  }
+  to {
+    background-image: url("/static/three.png");
+  }
+}
+
+@keyframes pulse3 {
+  from {
+    background-image: url("/static/three.png");
+  }
+  20% {
+    background-image: url("/static/six.png");
+  }
+  40% {
+    background-image: url("/static/four.png");
+  }
+  70% {
+    background-image: url("/static/five.png");
+  }
+  to {
+    background-image: url("/static/two.png");
+  }
+}
+
+%pulse0 {
+  animation-name: enlarge, shake1, pulse0;
+}
+%pulse1 {
+  animation-name: enlarge, shake1, pulse1;
+}
+%pulse2 {
+  animation-name: enlarge, shake2, pulse2;
+}
+%pulse3 {
+  animation-name: enlarge, shake2, pulse3;
+}
+
+.rolling {
+  animation-duration: 0.4s, 0.4s, 0.4s;
+}
+
+.rollingStyle0 {
+  @extend %pulse0;
+}
+.rollingStyle1 {
+  @extend %pulse1;
+}
+.rollingStyle2 {
+  @extend %pulse2;
+}
+.rollingStyle3 {
+  @extend %pulse3;
 }

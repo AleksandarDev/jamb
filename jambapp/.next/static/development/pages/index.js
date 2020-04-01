@@ -32,7 +32,7 @@ var ScoreCell = function ScoreCell(props) {
     }
   }, __jsx("div", {
     onClick: function onClick(e) {
-      return !props.value && props.hintValue != null && props.onSelect(e);
+      return props.value == null && props.hintValue != null && props.onSelect(e);
     },
     className: Object(clsx__WEBPACK_IMPORTED_MODULE_2__["default"])(_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.scoreLarge, props.value == null && props.hintValue <= 0 && _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.hintZero, props.value == null && props.hintValue > 0 && _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.hint, props.selected && _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.selected, props.disabled && _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.scoreDisabled),
     __self: _this,
@@ -235,12 +235,13 @@ var Board = function Board(props) {
     return boardValues.twoPairs[i] + boardValues.scale[i] + boardValues.poker[i] + boardValues.full[i] + boardValues.yamb[i];
   });
   var rowIndex = 0;
+  var diceStyles = [_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.dice1, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.dice2, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.dice3, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.dice4, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.dice5, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.dice6];
   return __jsx("div", {
     className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.tableContainer,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198,
+      lineNumber: 206,
       columnNumber: 5
     }
   }, __jsx("table", {
@@ -248,35 +249,35 @@ var Board = function Board(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 199,
+      lineNumber: 207,
       columnNumber: 7
     }
   }, __jsx("tbody", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200,
+      lineNumber: 208,
       columnNumber: 9
     }
   }, __jsx("tr", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 201,
+      lineNumber: 209,
       columnNumber: 11
     }
   }, __jsx("td", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 202,
+      lineNumber: 210,
       columnNumber: 13
     }
   }), __jsx("td", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203,
+      lineNumber: 211,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -284,14 +285,14 @@ var Board = function Board(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204,
+      lineNumber: 212,
       columnNumber: 15
     }
   }, "\u2B07")), __jsx("td", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206,
+      lineNumber: 214,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -299,14 +300,14 @@ var Board = function Board(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 207,
+      lineNumber: 215,
       columnNumber: 15
     }
   }, "\u2B06")), __jsx("td", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209,
+      lineNumber: 217,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -314,14 +315,14 @@ var Board = function Board(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210,
+      lineNumber: 218,
       columnNumber: 15
     }
   }, "\u2B07\u2B06")), __jsx("td", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 212,
+      lineNumber: 220,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -329,13 +330,21 @@ var Board = function Board(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213,
+      lineNumber: 221,
       columnNumber: 15
     }
   }, "NAJAVA"))), Array(6).fill().map(function (_, i) {
     return __jsx(ScoreRow, {
       index: rowIndex++,
-      label: i + 1,
+      label: __jsx("div", {
+        className: Object(clsx__WEBPACK_IMPORTED_MODULE_2__["default"])(_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.dice, diceStyles[i]),
+        __self: _this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 229,
+          columnNumber: 24
+        }
+      }),
       values: boardValues.numberScores[i],
       hintValues: Array(4).fill(numberScores[i]),
       boardState: boardState,
@@ -343,20 +352,19 @@ var Board = function Board(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 219,
+        lineNumber: 227,
         columnNumber: 15
       }
     });
   }), __jsx(ScoreRow, {
     disabled: true,
     label: "\u2211",
-    summarize: true,
     className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.sum,
     values: numbersSum,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228,
+      lineNumber: 236,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
@@ -370,7 +378,7 @@ var Board = function Board(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235,
+      lineNumber: 242,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
@@ -384,20 +392,19 @@ var Board = function Board(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244,
+      lineNumber: 251,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
     disabled: true,
     label: "RAZLIKA X1",
-    summarize: true,
     smallLabel: true,
     className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.sum,
     values: minMaxSum,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 253,
+      lineNumber: 260,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
@@ -411,7 +418,7 @@ var Board = function Board(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 261,
+      lineNumber: 267,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
@@ -425,7 +432,7 @@ var Board = function Board(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 270,
+      lineNumber: 276,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
@@ -439,7 +446,7 @@ var Board = function Board(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 279,
+      lineNumber: 285,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
@@ -453,7 +460,7 @@ var Board = function Board(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288,
+      lineNumber: 294,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
@@ -467,19 +474,18 @@ var Board = function Board(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 297,
+      lineNumber: 303,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
     disabled: true,
     label: "\u2211",
     className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.sum,
-    summarize: true,
     values: specialSum,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 306,
+      lineNumber: 312,
       columnNumber: 11
     }
   }), __jsx("tr", {
@@ -487,35 +493,28 @@ var Board = function Board(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 313,
+      lineNumber: 318,
       columnNumber: 11
     }
   }, __jsx("td", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 314,
+      lineNumber: 319,
       columnNumber: 13
     }
   }), __jsx("td", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 315,
+      lineNumber: 320,
       columnNumber: 13
     }
   }), __jsx("td", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 316,
-      columnNumber: 13
-    }
-  }), __jsx("td", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 317,
+      lineNumber: 321,
       columnNumber: 13
     }
   }), __jsx("td", {
@@ -523,7 +522,7 @@ var Board = function Board(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 318,
+      lineNumber: 322,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -531,7 +530,7 @@ var Board = function Board(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 319,
+      lineNumber: 323,
       columnNumber: 15
     }
   }, numbersSum.reduce(function (sum, val) {
@@ -801,7 +800,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 var Dice = function Dice(props) {
   var value = props.value,
-      isSelected = props.isSelected;
+      isSelected = props.isSelected,
+      isRolling = props.isRolling;
   var diceValueStyle = _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceValue0;
 
   switch (value) {
@@ -833,20 +833,21 @@ var Dice = function Dice(props) {
       break;
   }
 
+  var rollingStyle = _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a["rollingStyle".concat(Math.floor(Math.random() * 4))];
   return __jsx("div", {
     className: Object(clsx__WEBPACK_IMPORTED_MODULE_1__["default"])(isSelected && _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.selected, _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.selectionContainer),
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 35,
       columnNumber: 5
     }
   }, __jsx("div", {
-    className: Object(clsx__WEBPACK_IMPORTED_MODULE_1__["default"])(_Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.root, diceValueStyle, _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceValue),
+    className: Object(clsx__WEBPACK_IMPORTED_MODULE_1__["default"])(_Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.root, _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceValue, diceValueStyle, !isSelected && isRolling && _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.rolling, !isSelected && isRolling && rollingStyle),
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
+      lineNumber: 38,
       columnNumber: 7
     }
   }));
@@ -946,6 +947,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
+var roll1 = null;
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
@@ -1002,9 +1004,10 @@ var DiceSet = function DiceSet(props) {
     }
 
     setRound(currentRound);
-  });
+  }, [currentRound]);
 
   var handleDiceClick = function handleDiceClick(i) {
+    if (diceValues[i].value <= 0) return;
     diceValues[i].isSelected = !diceValues[i].isSelected;
     setDiceValues(Object(_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(diceValues));
   };
@@ -1019,8 +1022,20 @@ var DiceSet = function DiceSet(props) {
     setDiceValues(Object(_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(diceValues));
     onDiceValueChange(diceValues.map(function (d) {
       return d.value;
-    }));
+    })); // Roll dice
+
+    setIsRolling(true);
+    setTimeout(function () {
+      return setIsRolling(false);
+    }, 400); // Play sound
+
+    if (roll1 == null) roll1 = new Audio("/static/roll1.mp3");
+    roll1.play();
   };
+
+  var _useState4 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
+      isRolling = _useState4[0],
+      setIsRolling = _useState4[1];
 
   return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
     container: true,
@@ -1029,7 +1044,7 @@ var DiceSet = function DiceSet(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 87,
       columnNumber: 5
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
@@ -1037,7 +1052,7 @@ var DiceSet = function DiceSet(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 88,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
@@ -1045,10 +1060,11 @@ var DiceSet = function DiceSet(props) {
     direction: "column",
     alignItems: "center",
     justify: "flex-start",
+    spacing: 1,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 89,
       columnNumber: 9
     }
   }, diceValues.map(function (diceValue, i) {
@@ -1060,17 +1076,18 @@ var DiceSet = function DiceSet(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83,
+        lineNumber: 97,
         columnNumber: 13
       }
     }, __jsx(_Dice_Dice__WEBPACK_IMPORTED_MODULE_2__["default"], {
       key: "dice" + i,
       value: diceValue.value,
       isSelected: diceValue.isSelected,
+      isRolling: isRolling,
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84,
+        lineNumber: 98,
         columnNumber: 15
       }
     }));
@@ -1079,7 +1096,7 @@ var DiceSet = function DiceSet(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93,
+      lineNumber: 108,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
@@ -1088,7 +1105,7 @@ var DiceSet = function DiceSet(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94,
+      lineNumber: 109,
       columnNumber: 9
     }
   }, Array(3).fill(1).map(function (item, i) {
@@ -1097,7 +1114,7 @@ var DiceSet = function DiceSet(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 98,
+        lineNumber: 113,
         columnNumber: 15
       }
     }, __jsx("span", {
@@ -1105,7 +1122,7 @@ var DiceSet = function DiceSet(props) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 99,
+        lineNumber: 114,
         columnNumber: 17
       }
     }, i + 1));
@@ -1114,7 +1131,7 @@ var DiceSet = function DiceSet(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111,
+      lineNumber: 126,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Button"], {
@@ -1125,7 +1142,7 @@ var DiceSet = function DiceSet(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112,
+      lineNumber: 127,
       columnNumber: 9
     }
   }, __jsx("img", {
@@ -1135,7 +1152,7 @@ var DiceSet = function DiceSet(props) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118,
+      lineNumber: 133,
       columnNumber: 11
     }
   }))));
@@ -42110,7 +42127,7 @@ function toVal(mix) {
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".Board_tableContainer__11JPn {\n  padding: 4px;\n  display: inline-block;\n}\n\n.Board_jambTable__2XNGH td {\n  width: 34px;\n  height: 34px;\n}\n.Board_jambTable__2XNGH .Board_score__36vPV {\n  width: 100%;\n  height: 100%;\n  background-color: #fff4f4;\n  font-size: 0.5em;\n  text-align: center;\n  border-radius: 2px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.Board_jambTable__2XNGH .Board_hintZero__2Zy87 {\n  color: rgba(0, 0, 0, 0.15);\n}\n.Board_jambTable__2XNGH .Board_hint__pu2Gb {\n  color: rgba(0, 0, 0, 0.3);\n}\n.Board_jambTable__2XNGH .Board_selected__1hRu4 {\n  border: 2px dashed #8d0000;\n}\n.Board_jambTable__2XNGH .Board_scoreDisabled__2WxYU {\n  color: #c27474;\n}\n.Board_jambTable__2XNGH .Board_scoreLarge__1z0GB {\n  font-size: 1rem;\n}\n.Board_jambTable__2XNGH tr.Board_sum__3Cd39 td .Board_score__36vPV {\n  background-color: #ffc2c2;\n}", "",{"version":3,"sources":["Board.module.scss"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,qBAAA;AACF;;AAGE;EACE,WAAA;EACA,YAAA;AAAJ;AAGE;EACE,WAAA;EACA,YAAA;EACA,yBAAA;EACA,gBAAA;EACA,kBAAA;EACA,kBAAA;EAEA,aAAA;EACA,uBAAA;EACA,mBAAA;AAFJ;AAKE;EACE,0BAAA;AAHJ;AAME;EACE,yBAAA;AAJJ;AAOE;EACE,0BAAA;AALJ;AAQE;EACE,cAAA;AANJ;AASE;EACE,eAAA;AAPJ;AAUE;EACE,yBAAA;AARJ","file":"Board.module.scss","sourcesContent":[".tableContainer {\n  padding: 4px;\n  display: inline-block;\n}\n\n.jambTable {\n  td {\n    width: 34px;\n    height: 34px;\n  }\n\n  .score {\n    width: 100%;\n    height: 100%;\n    background-color: #fff4f4;\n    font-size: 0.5em;\n    text-align: center;\n    border-radius: 2px;\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .hintZero {\n    color: rgba(0, 0, 0, 0.15);\n  }\n\n  .hint {\n    color: rgba(0, 0, 0, 0.3);\n  }\n\n  .selected {\n    border: 2px dashed rgb(141, 0, 0);\n  }\n\n  .scoreDisabled {\n    color: rgb(194, 116, 116);\n  }\n\n  .scoreLarge {\n    font-size: 1rem;\n  }\n\n  tr.sum td .score {\n    background-color: hsl(0, 100%, 88%);\n  }\n}\n"]}]);
+exports.push([module.i, ".Board_tableContainer__11JPn {\n  padding: 4px;\n  display: inline-block;\n}\n\n.Board_jambTable__2XNGH td {\n  width: 34px;\n  height: 34px;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.Board_jambTable__2XNGH .Board_score__36vPV {\n  width: 100%;\n  height: 100%;\n  background-color: #fff4f4;\n  font-size: 0.5em;\n  text-align: center;\n  border-radius: 2px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.Board_jambTable__2XNGH .Board_hintZero__2Zy87 {\n  color: rgba(0, 0, 0, 0.15);\n}\n.Board_jambTable__2XNGH .Board_hint__pu2Gb {\n  color: rgba(0, 0, 0, 0.3);\n}\n.Board_jambTable__2XNGH .Board_selected__1hRu4 {\n  border: 2px dashed #8d0000;\n}\n.Board_jambTable__2XNGH .Board_scoreDisabled__2WxYU {\n  color: #c27474;\n}\n.Board_jambTable__2XNGH .Board_scoreLarge__1z0GB {\n  font-size: 1rem;\n}\n.Board_jambTable__2XNGH tr.Board_sum__3Cd39 td .Board_score__36vPV {\n  background-color: #ffc2c2;\n}\n\n.Board_dice__1hDnr {\n  background-size: 34px 34px;\n  background-repeat: no-repeat;\n  width: 34px;\n  height: 34px;\n  display: inline-block;\n}\n\n.Board_dice1__qJXDI {\n  background-image: url(\"/static/one.png\");\n}\n\n.Board_dice2__z7rWp {\n  background-image: url(\"/static/two.png\");\n}\n\n.Board_dice3__3YlGe {\n  background-image: url(\"/static/three.png\");\n}\n\n.Board_dice4__30xjx {\n  background-image: url(\"/static/four.png\");\n}\n\n.Board_dice5__1QMNN {\n  background-image: url(\"/static/five.png\");\n}\n\n.Board_dice6__1Tekh {\n  background-image: url(\"/static/six.png\");\n}", "",{"version":3,"sources":["Board.module.scss"],"names":[],"mappings":"AAEA;EACE,YAAA;EACA,qBAAA;AADF;;AAKE;EACE,WATO;EAUP,YAVO;EAWP,yBAAA;KAAA,sBAAA;MAAA,qBAAA;UAAA,iBAAA;AAFJ;AAKE;EACE,WAAA;EACA,YAAA;EACA,yBAAA;EACA,gBAAA;EACA,kBAAA;EACA,kBAAA;EAEA,aAAA;EACA,uBAAA;EACA,mBAAA;AAJJ;AAOE;EACE,0BAAA;AALJ;AAQE;EACE,yBAAA;AANJ;AASE;EACE,0BAAA;AAPJ;AAUE;EACE,cAAA;AARJ;AAWE;EACE,eAAA;AATJ;AAYE;EACE,yBAAA;AAVJ;;AAcA;EACE,0BAAA;EACA,4BAAA;EACA,WAvDS;EAwDT,YAxDS;EAyDT,qBAAA;AAXF;;AAaA;EACE,wCAAA;AAVF;;AAYA;EACE,wCAAA;AATF;;AAWA;EACE,0CAAA;AARF;;AAUA;EACE,yCAAA;AAPF;;AASA;EACE,yCAAA;AANF;;AAQA;EACE,wCAAA;AALF","file":"Board.module.scss","sourcesContent":["$cellSize: 34px;\n\n.tableContainer {\n  padding: 4px;\n  display: inline-block;\n}\n\n.jambTable {\n  td {\n    width: $cellSize;\n    height: $cellSize;\n    user-select: none;\n  }\n\n  .score {\n    width: 100%;\n    height: 100%;\n    background-color: #fff4f4;\n    font-size: 0.5em;\n    text-align: center;\n    border-radius: 2px;\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .hintZero {\n    color: rgba(0, 0, 0, 0.15);\n  }\n\n  .hint {\n    color: rgba(0, 0, 0, 0.3);\n  }\n\n  .selected {\n    border: 2px dashed rgb(141, 0, 0);\n  }\n\n  .scoreDisabled {\n    color: rgb(194, 116, 116);\n  }\n\n  .scoreLarge {\n    font-size: 1rem;\n  }\n\n  tr.sum td .score {\n    background-color: hsl(0, 100%, 88%);\n  }\n}\n\n.dice {\n  background-size: $cellSize $cellSize;\n  background-repeat: no-repeat;\n  width: $cellSize;\n  height: $cellSize;\n  display: inline-block;\n}\n.dice1 {\n  background-image: url(\"/static/one.png\");\n}\n.dice2 {\n  background-image: url(\"/static/two.png\");\n}\n.dice3 {\n  background-image: url(\"/static/three.png\");\n}\n.dice4 {\n  background-image: url(\"/static/four.png\");\n}\n.dice5 {\n  background-image: url(\"/static/five.png\");\n}\n.dice6 {\n  background-image: url(\"/static/six.png\");\n}\n"]}]);
 // Exports
 exports.locals = {
 	"tableContainer": "Board_tableContainer__11JPn",
@@ -42121,7 +42138,14 @@ exports.locals = {
 	"selected": "Board_selected__1hRu4",
 	"scoreDisabled": "Board_scoreDisabled__2WxYU",
 	"scoreLarge": "Board_scoreLarge__1z0GB",
-	"sum": "Board_sum__3Cd39"
+	"sum": "Board_sum__3Cd39",
+	"dice": "Board_dice__1hDnr",
+	"dice1": "Board_dice1__qJXDI",
+	"dice2": "Board_dice2__z7rWp",
+	"dice3": "Board_dice3__3YlGe",
+	"dice4": "Board_dice4__30xjx",
+	"dice5": "Board_dice5__1QMNN",
+	"dice6": "Board_dice6__1Tekh"
 };
 
 /***/ }),
@@ -42154,7 +42178,7 @@ exports.locals = {
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".Dice_root__2XBSj {\n  display: inline-block;\n  width: 50px;\n  height: 50px;\n}\n\n.Dice_selectionContainer___RHmx {\n  padding: 4px;\n  display: flex;\n}\n\n.Dice_selected__3Y0D9 {\n  border: 2px dashed white;\n  border-radius: 4px;\n  padding: 2px;\n}\n\n.Dice_diceValue0__1C_xh {\n  background-image: url(\"/static/none.png\");\n}\n\n.Dice_diceValue1__1QWIP {\n  background-image: url(\"/static/one.png\");\n}\n\n.Dice_diceValue2__1Rm4t {\n  background-image: url(\"/static/two.png\");\n}\n\n.Dice_diceValue3__2-R8d {\n  background-image: url(\"/static/three.png\");\n}\n\n.Dice_diceValue4__2PGHg {\n  background-image: url(\"/static/four.png\");\n}\n\n.Dice_diceValue5__2Y23A {\n  background-image: url(\"/static/five.png\");\n}\n\n.Dice_diceValue6__2NtPW {\n  background-image: url(\"/static/six.png\");\n}\n\n.Dice_diceValue__V4uRP {\n  background-size: 50px 50px;\n  background-repeat: no-repeat;\n  height: 50px;\n}", "",{"version":3,"sources":["Dice.module.scss"],"names":[],"mappings":"AAEA;EACE,qBAAA;EACA,WAJS;EAKT,YALS;AAIX;;AAIA;EACE,YAAA;EACA,aAAA;AADF;;AAIA;EACE,wBAAA;EACA,kBAAA;EACA,YAAA;AADF;;AAIA;EACE,yCAAA;AADF;;AAGA;EACE,wCAAA;AAAF;;AAEA;EACE,wCAAA;AACF;;AACA;EACE,0CAAA;AAEF;;AAAA;EACE,yCAAA;AAGF;;AADA;EACE,yCAAA;AAIF;;AAFA;EACE,wCAAA;AAKF;;AAFA;EACE,0BAAA;EACA,4BAAA;EACA,YA5CS;AAiDX","file":"Dice.module.scss","sourcesContent":["$diceSize: 50px;\n\n.root {\n  display: inline-block;\n  width: $diceSize;\n  height: $diceSize;\n}\n\n.selectionContainer {\n  padding: 4px;\n  display: flex;\n}\n\n.selected {\n  border: 2px dashed white;\n  border-radius: 4px;\n  padding: 2px;\n}\n\n.diceValue0 {\n  background-image: url(\"/static/none.png\");\n}\n.diceValue1 {\n  background-image: url(\"/static/one.png\");\n}\n.diceValue2 {\n  background-image: url(\"/static/two.png\");\n}\n.diceValue3 {\n  background-image: url(\"/static/three.png\");\n}\n.diceValue4 {\n  background-image: url(\"/static/four.png\");\n}\n.diceValue5 {\n  background-image: url(\"/static/five.png\");\n}\n.diceValue6 {\n  background-image: url(\"/static/six.png\");\n}\n\n.diceValue {\n  background-size: $diceSize $diceSize;\n  background-repeat: no-repeat;\n  height: $diceSize;\n}\n"]}]);
+exports.push([module.i, ".Dice_root__2XBSj {\n  display: inline-block;\n  width: 50px;\n  height: 50px;\n}\n\n.Dice_selectionContainer___RHmx {\n  padding: 4px;\n  display: flex;\n}\n\n.Dice_selected__3Y0D9 {\n  border: 2px dashed white;\n  border-radius: 6px;\n  padding: 2px;\n}\n\n.Dice_diceValue0__1C_xh {\n  background-image: url(\"/static/none.png\");\n}\n\n.Dice_diceValue1__1QWIP {\n  background-image: url(\"/static/one.png\");\n}\n\n.Dice_diceValue2__1Rm4t {\n  background-image: url(\"/static/two.png\");\n}\n\n.Dice_diceValue3__2-R8d {\n  background-image: url(\"/static/three.png\");\n}\n\n.Dice_diceValue4__2PGHg {\n  background-image: url(\"/static/four.png\");\n}\n\n.Dice_diceValue5__2Y23A {\n  background-image: url(\"/static/five.png\");\n}\n\n.Dice_diceValue6__2NtPW {\n  background-image: url(\"/static/six.png\");\n}\n\n.Dice_diceValue__V4uRP {\n  background-size: 50px 50px;\n  background-repeat: no-repeat;\n  height: 50px;\n}\n\n@-webkit-keyframes Dice_shake1__1P9T9 {\n  from, to {\n    transform: translate3d(0, 0, 0);\n  }\n  10%, 30%, 50%, 70%, 90% {\n    transform: translate3d(-2px, 0, 0);\n  }\n  20%, 40%, 60%, 80% {\n    transform: translate3d(2px, 0, 0);\n  }\n}\n\n@keyframes Dice_shake1__1P9T9 {\n  from, to {\n    transform: translate3d(0, 0, 0);\n  }\n  10%, 30%, 50%, 70%, 90% {\n    transform: translate3d(-2px, 0, 0);\n  }\n  20%, 40%, 60%, 80% {\n    transform: translate3d(2px, 0, 0);\n  }\n}\n@-webkit-keyframes Dice_shake2__2kmhQ {\n  from, to {\n    transform: translate3d(0, 0, 0);\n  }\n  15%, 35%, 55%, 75%, 95% {\n    transform: translate3d(2px, 0, 0);\n  }\n  25%, 45%, 65%, 85% {\n    transform: translate3d(-2px, 0, 0);\n  }\n}\n@keyframes Dice_shake2__2kmhQ {\n  from, to {\n    transform: translate3d(0, 0, 0);\n  }\n  15%, 35%, 55%, 75%, 95% {\n    transform: translate3d(2px, 0, 0);\n  }\n  25%, 45%, 65%, 85% {\n    transform: translate3d(-2px, 0, 0);\n  }\n}\n@-webkit-keyframes Dice_enlarge__1Cyku {\n  from {\n    transform: scale3d(1, 1, 1);\n  }\n  10% {\n    transform: scale3d(1.1, 1.1, 1.1);\n  }\n  to {\n    transform: scale3d(1, 1, 1);\n  }\n}\n@keyframes Dice_enlarge__1Cyku {\n  from {\n    transform: scale3d(1, 1, 1);\n  }\n  10% {\n    transform: scale3d(1.1, 1.1, 1.1);\n  }\n  to {\n    transform: scale3d(1, 1, 1);\n  }\n}\n@-webkit-keyframes Dice_pulse0__1wKaT {\n  from {\n    background-image: url(\"/static/one.png\");\n  }\n  20% {\n    background-image: url(\"/static/five.png\");\n  }\n  40% {\n    background-image: url(\"/static/six.png\");\n  }\n  70% {\n    background-image: url(\"/static/five.png\");\n  }\n  to {\n    background-image: url(\"/static/six.png\");\n  }\n}\n@keyframes Dice_pulse0__1wKaT {\n  from {\n    background-image: url(\"/static/one.png\");\n  }\n  20% {\n    background-image: url(\"/static/five.png\");\n  }\n  40% {\n    background-image: url(\"/static/six.png\");\n  }\n  70% {\n    background-image: url(\"/static/five.png\");\n  }\n  to {\n    background-image: url(\"/static/six.png\");\n  }\n}\n@-webkit-keyframes Dice_pulse1__1VB4S {\n  from {\n    background-image: url(\"/static/two.png\");\n  }\n  10% {\n    background-image: url(\"/static/three.png\");\n  }\n  30% {\n    background-image: url(\"/static/four.png\");\n  }\n  50% {\n    background-image: url(\"/static/one.png\");\n  }\n  to {\n    background-image: url(\"/static/one.png\");\n  }\n}\n@keyframes Dice_pulse1__1VB4S {\n  from {\n    background-image: url(\"/static/two.png\");\n  }\n  10% {\n    background-image: url(\"/static/three.png\");\n  }\n  30% {\n    background-image: url(\"/static/four.png\");\n  }\n  50% {\n    background-image: url(\"/static/one.png\");\n  }\n  to {\n    background-image: url(\"/static/one.png\");\n  }\n}\n@-webkit-keyframes Dice_pulse2__2Qrw0 {\n  from {\n    background-image: url(\"/static/five.png\");\n  }\n  20% {\n    background-image: url(\"/static/one.png\");\n  }\n  40% {\n    background-image: url(\"/static/four.png\");\n  }\n  60% {\n    background-image: url(\"/static/five.png\");\n  }\n  to {\n    background-image: url(\"/static/three.png\");\n  }\n}\n@keyframes Dice_pulse2__2Qrw0 {\n  from {\n    background-image: url(\"/static/five.png\");\n  }\n  20% {\n    background-image: url(\"/static/one.png\");\n  }\n  40% {\n    background-image: url(\"/static/four.png\");\n  }\n  60% {\n    background-image: url(\"/static/five.png\");\n  }\n  to {\n    background-image: url(\"/static/three.png\");\n  }\n}\n@-webkit-keyframes Dice_pulse3__rJc6z {\n  from {\n    background-image: url(\"/static/three.png\");\n  }\n  20% {\n    background-image: url(\"/static/six.png\");\n  }\n  40% {\n    background-image: url(\"/static/four.png\");\n  }\n  70% {\n    background-image: url(\"/static/five.png\");\n  }\n  to {\n    background-image: url(\"/static/two.png\");\n  }\n}\n@keyframes Dice_pulse3__rJc6z {\n  from {\n    background-image: url(\"/static/three.png\");\n  }\n  20% {\n    background-image: url(\"/static/six.png\");\n  }\n  40% {\n    background-image: url(\"/static/four.png\");\n  }\n  70% {\n    background-image: url(\"/static/five.png\");\n  }\n  to {\n    background-image: url(\"/static/two.png\");\n  }\n}\n.Dice_rollingStyle0__9wK1t {\n  -webkit-animation-name: Dice_enlarge__1Cyku, Dice_shake1__1P9T9, Dice_pulse0__1wKaT;\n          animation-name: Dice_enlarge__1Cyku, Dice_shake1__1P9T9, Dice_pulse0__1wKaT;\n}\n\n.Dice_rollingStyle1__1lA36 {\n  -webkit-animation-name: Dice_enlarge__1Cyku, Dice_shake1__1P9T9, Dice_pulse1__1VB4S;\n          animation-name: Dice_enlarge__1Cyku, Dice_shake1__1P9T9, Dice_pulse1__1VB4S;\n}\n\n.Dice_rollingStyle2__2nahU {\n  -webkit-animation-name: Dice_enlarge__1Cyku, Dice_shake2__2kmhQ, Dice_pulse2__2Qrw0;\n          animation-name: Dice_enlarge__1Cyku, Dice_shake2__2kmhQ, Dice_pulse2__2Qrw0;\n}\n\n.Dice_rollingStyle3__2ZXFj {\n  -webkit-animation-name: Dice_enlarge__1Cyku, Dice_shake2__2kmhQ, Dice_pulse3__rJc6z;\n          animation-name: Dice_enlarge__1Cyku, Dice_shake2__2kmhQ, Dice_pulse3__rJc6z;\n}\n\n.Dice_rolling__1ZreS {\n  -webkit-animation-duration: 0.4s, 0.4s, 0.4s;\n          animation-duration: 0.4s, 0.4s, 0.4s;\n}", "",{"version":3,"sources":["Dice.module.scss"],"names":[],"mappings":"AAEA;EACE,qBAAA;EACA,WAJS;EAKT,YALS;AAIX;;AAIA;EACE,YAAA;EACA,aAAA;AADF;;AAIA;EACE,wBAAA;EACA,kBAAA;EACA,YAAA;AADF;;AAIA;EACE,yCAAA;AADF;;AAGA;EACE,wCAAA;AAAF;;AAEA;EACE,wCAAA;AACF;;AACA;EACE,0CAAA;AAEF;;AAAA;EACE,yCAAA;AAGF;;AADA;EACE,yCAAA;AAIF;;AAFA;EACE,wCAAA;AAKF;;AAFA;EACE,0BAAA;EACA,4BAAA;EACA,YA5CS;AAiDX;;AADA;EACE;IAGE,+BAAA;EAGF;EADA;IAME,kCAAA;EADF;EAGA;IAKE,iCAAA;EAJF;AACF;;AAhBA;EACE;IAGE,+BAAA;EAGF;EADA;IAME,kCAAA;EADF;EAGA;IAKE,iCAAA;EAJF;AACF;AAMA;EACE;IAGE,+BAAA;EALF;EAOA;IAME,iCAAA;EATF;EAWA;IAKE,kCAAA;EAZF;AACF;AARA;EACE;IAGE,+BAAA;EALF;EAOA;IAME,iCAAA;EATF;EAWA;IAKE,kCAAA;EAZF;AACF;AAeA;EACE;IACE,2BAAA;EAbF;EAeA;IACE,iCAAA;EAbF;EAeA;IACE,2BAAA;EAbF;AACF;AAIA;EACE;IACE,2BAAA;EAbF;EAeA;IACE,iCAAA;EAbF;EAeA;IACE,2BAAA;EAbF;AACF;AAgBA;EACE;IACE,wCAAA;EAdF;EAgBA;IACE,yCAAA;EAdF;EAgBA;IACE,wCAAA;EAdF;EAgBA;IACE,yCAAA;EAdF;EAgBA;IACE,wCAAA;EAdF;AACF;AADA;EACE;IACE,wCAAA;EAdF;EAgBA;IACE,yCAAA;EAdF;EAgBA;IACE,wCAAA;EAdF;EAgBA;IACE,yCAAA;EAdF;EAgBA;IACE,wCAAA;EAdF;AACF;AAiBA;EACE;IACE,wCAAA;EAfF;EAiBA;IACE,0CAAA;EAfF;EAiBA;IACE,yCAAA;EAfF;EAiBA;IACE,wCAAA;EAfF;EAiBA;IACE,wCAAA;EAfF;AACF;AAAA;EACE;IACE,wCAAA;EAfF;EAiBA;IACE,0CAAA;EAfF;EAiBA;IACE,yCAAA;EAfF;EAiBA;IACE,wCAAA;EAfF;EAiBA;IACE,wCAAA;EAfF;AACF;AAkBA;EACE;IACE,yCAAA;EAhBF;EAkBA;IACE,wCAAA;EAhBF;EAkBA;IACE,yCAAA;EAhBF;EAkBA;IACE,yCAAA;EAhBF;EAkBA;IACE,0CAAA;EAhBF;AACF;AACA;EACE;IACE,yCAAA;EAhBF;EAkBA;IACE,wCAAA;EAhBF;EAkBA;IACE,yCAAA;EAhBF;EAkBA;IACE,yCAAA;EAhBF;EAkBA;IACE,0CAAA;EAhBF;AACF;AAmBA;EACE;IACE,0CAAA;EAjBF;EAmBA;IACE,wCAAA;EAjBF;EAmBA;IACE,yCAAA;EAjBF;EAmBA;IACE,yCAAA;EAjBF;EAmBA;IACE,wCAAA;EAjBF;AACF;AAEA;EACE;IACE,0CAAA;EAjBF;EAmBA;IACE,wCAAA;EAjBF;EAmBA;IACE,yCAAA;EAjBF;EAmBA;IACE,yCAAA;EAjBF;EAmBA;IACE,wCAAA;EAjBF;AACF;AAoBA;EACE,mFAAA;UAAA,2EAAA;AAlBF;;AAoBA;EACE,mFAAA;UAAA,2EAAA;AAjBF;;AAmBA;EACE,mFAAA;UAAA,2EAAA;AAhBF;;AAkBA;EACE,mFAAA;UAAA,2EAAA;AAfF;;AAkBA;EACE,4CAAA;UAAA,oCAAA;AAfF","file":"Dice.module.scss","sourcesContent":["$diceSize: 50px;\n\n.root {\n  display: inline-block;\n  width: $diceSize;\n  height: $diceSize;\n}\n\n.selectionContainer {\n  padding: 4px;\n  display: flex;\n}\n\n.selected {\n  border: 2px dashed white;\n  border-radius: 6px;\n  padding: 2px;\n}\n\n.diceValue0 {\n  background-image: url(\"/static/none.png\");\n}\n.diceValue1 {\n  background-image: url(\"/static/one.png\");\n}\n.diceValue2 {\n  background-image: url(\"/static/two.png\");\n}\n.diceValue3 {\n  background-image: url(\"/static/three.png\");\n}\n.diceValue4 {\n  background-image: url(\"/static/four.png\");\n}\n.diceValue5 {\n  background-image: url(\"/static/five.png\");\n}\n.diceValue6 {\n  background-image: url(\"/static/six.png\");\n}\n\n.diceValue {\n  background-size: $diceSize $diceSize;\n  background-repeat: no-repeat;\n  height: $diceSize;\n}\n\n$shakeMagnitude: 2px;\n@keyframes shake1 {\n  from,\n  to {\n    -webkit-transform: translate3d(0, 0, 0);\n    transform: translate3d(0, 0, 0);\n  }\n  10%,\n  30%,\n  50%,\n  70%,\n  90% {\n    -webkit-transform: translate3d(-$shakeMagnitude, 0, 0);\n    transform: translate3d(-$shakeMagnitude, 0, 0);\n  }\n  20%,\n  40%,\n  60%,\n  80% {\n    -webkit-transform: translate3d($shakeMagnitude, 0, 0);\n    transform: translate3d($shakeMagnitude, 0, 0);\n  }\n}\n@keyframes shake2 {\n  from,\n  to {\n    -webkit-transform: translate3d(0, 0, 0);\n    transform: translate3d(0, 0, 0);\n  }\n  15%,\n  35%,\n  55%,\n  75%,\n  95% {\n    -webkit-transform: translate3d($shakeMagnitude, 0, 0);\n    transform: translate3d($shakeMagnitude, 0, 0);\n  }\n  25%,\n  45%,\n  65%,\n  85% {\n    -webkit-transform: translate3d(-$shakeMagnitude, 0, 0);\n    transform: translate3d(-$shakeMagnitude, 0, 0);\n  }\n}\n\n@keyframes enlarge {\n  from {\n    transform: scale3d(1, 1, 1);\n  }\n  10% {\n    transform: scale3d(1.1, 1.1, 1.1);\n  }\n  to {\n    transform: scale3d(1, 1, 1);\n  }\n}\n\n@keyframes pulse0 {\n  from {\n    background-image: url(\"/static/one.png\");\n  }\n  20% {\n    background-image: url(\"/static/five.png\");\n  }\n  40% {\n    background-image: url(\"/static/six.png\");\n  }\n  70% {\n    background-image: url(\"/static/five.png\");\n  }\n  to {\n    background-image: url(\"/static/six.png\");\n  }\n}\n\n@keyframes pulse1 {\n  from {\n    background-image: url(\"/static/two.png\");\n  }\n  10% {\n    background-image: url(\"/static/three.png\");\n  }\n  30% {\n    background-image: url(\"/static/four.png\");\n  }\n  50% {\n    background-image: url(\"/static/one.png\");\n  }\n  to {\n    background-image: url(\"/static/one.png\");\n  }\n}\n\n@keyframes pulse2 {\n  from {\n    background-image: url(\"/static/five.png\");\n  }\n  20% {\n    background-image: url(\"/static/one.png\");\n  }\n  40% {\n    background-image: url(\"/static/four.png\");\n  }\n  60% {\n    background-image: url(\"/static/five.png\");\n  }\n  to {\n    background-image: url(\"/static/three.png\");\n  }\n}\n\n@keyframes pulse3 {\n  from {\n    background-image: url(\"/static/three.png\");\n  }\n  20% {\n    background-image: url(\"/static/six.png\");\n  }\n  40% {\n    background-image: url(\"/static/four.png\");\n  }\n  70% {\n    background-image: url(\"/static/five.png\");\n  }\n  to {\n    background-image: url(\"/static/two.png\");\n  }\n}\n\n%pulse0 {\n  animation-name: enlarge, shake1, pulse0;\n}\n%pulse1 {\n  animation-name: enlarge, shake1, pulse1;\n}\n%pulse2 {\n  animation-name: enlarge, shake2, pulse2;\n}\n%pulse3 {\n  animation-name: enlarge, shake2, pulse3;\n}\n\n.rolling {\n  animation-duration: 0.4s, 0.4s, 0.4s;\n}\n\n.rollingStyle0 {\n  @extend %pulse0;\n}\n.rollingStyle1 {\n  @extend %pulse1;\n}\n.rollingStyle2 {\n  @extend %pulse2;\n}\n.rollingStyle3 {\n  @extend %pulse3;\n}\n"]}]);
 // Exports
 exports.locals = {
 	"root": "Dice_root__2XBSj",
@@ -42167,7 +42191,19 @@ exports.locals = {
 	"diceValue4": "Dice_diceValue4__2PGHg",
 	"diceValue5": "Dice_diceValue5__2Y23A",
 	"diceValue6": "Dice_diceValue6__2NtPW",
-	"diceValue": "Dice_diceValue__V4uRP"
+	"diceValue": "Dice_diceValue__V4uRP",
+	"rollingStyle0": "Dice_rollingStyle0__9wK1t",
+	"enlarge": "Dice_enlarge__1Cyku",
+	"shake1": "Dice_shake1__1P9T9",
+	"pulse0": "Dice_pulse0__1wKaT",
+	"rollingStyle1": "Dice_rollingStyle1__1lA36",
+	"pulse1": "Dice_pulse1__1VB4S",
+	"rollingStyle2": "Dice_rollingStyle2__2nahU",
+	"shake2": "Dice_shake2__2kmhQ",
+	"pulse2": "Dice_pulse2__2Qrw0",
+	"rollingStyle3": "Dice_rollingStyle3__2ZXFj",
+	"pulse3": "Dice_pulse3__rJc6z",
+	"rolling": "Dice_rolling__1ZreS"
 };
 
 /***/ }),
@@ -42199,11 +42235,8 @@ exports.locals = {
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".index_root__1BJ3w {\n  background-color: #ec3838;\n}", "",{"version":3,"sources":["index.module.scss"],"names":[],"mappings":"AAAA;EACE,yBAAA;AACF","file":"index.module.scss","sourcesContent":[".root {\n  background-color: #ec3838;\n}\n"]}]);
-// Exports
-exports.locals = {
-	"root": "index_root__1BJ3w"
-};
+exports.push([module.i, "", "",{"version":3,"sources":[],"names":[],"mappings":"","file":"index.module.scss"}]);
+
 
 /***/ }),
 
@@ -52285,7 +52318,17 @@ var Index = function Index() {
     }));
   };
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({
+  var oldBoardValue = null;
+  var localStorageBoardValue = window.localStorage && window.localStorage.getItem("boardData", boardValues);
+
+  if (localStorageBoardValue) {
+    try {
+      oldBoardValue = JSON.parse(localStorageBoardValue);
+      if (!(oldBoardValue && typeof oldBoardValue.round === "number")) oldBoardValue = null;
+    } catch (_unused) {}
+  }
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(oldBoardValue || {
     numberScores: [[null, null, null, null], [null, null, null, null], [null, null, null, null], [null, null, null, null], [null, null, null, null], [null, null, null, null]],
     min: [null, null, null, null],
     max: [null, null, null, null],
@@ -52325,19 +52368,22 @@ var Index = function Index() {
     }
   };
 
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
+    window.localStorage != null && window.localStorage.setItem("boardData", JSON.stringify(boardValues));
+  }, [boardValues]);
   return __jsx("div", {
     className: _index_module_scss__WEBPACK_IMPORTED_MODULE_8___default.a.root,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122,
+      lineNumber: 140,
       columnNumber: 5
     }
   }, __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125,
+      lineNumber: 143,
       columnNumber: 7
     }
   }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Grid"], {
@@ -52346,7 +52392,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128,
+      lineNumber: 146,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Grid"], {
@@ -52354,7 +52400,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129,
+      lineNumber: 147,
       columnNumber: 9
     }
   }, __jsx(_components_Board_Board__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -52363,7 +52409,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130,
+      lineNumber: 148,
       columnNumber: 11
     }
   })), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_7__["Grid"], {
@@ -52371,7 +52417,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135,
+      lineNumber: 153,
       columnNumber: 9
     }
   }, __jsx(_components_DiceSet_DiceSet__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -52381,7 +52427,7 @@ var Index = function Index() {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136,
+      lineNumber: 154,
       columnNumber: 11
     }
   }))));

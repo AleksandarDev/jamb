@@ -122,7 +122,7 @@ const ScoreCell = props => __jsx("td", {
     columnNumber: 3
   }
 }, __jsx("div", {
-  onClick: e => !props.value && props.hintValue != null && props.onSelect(e),
+  onClick: e => props.value == null && props.hintValue != null && props.onSelect(e),
   className: clsx__WEBPACK_IMPORTED_MODULE_2___default()(_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.score, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.scoreLarge, props.value == null && props.hintValue <= 0 && _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.hintZero, props.value == null && props.hintValue > 0 && _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.hint, props.selected && _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.selected, props.disabled && _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.scoreDisabled),
   __self: undefined,
   __source: {
@@ -293,12 +293,13 @@ const Board = props => {
   const minMaxSum = Array(4).fill().map((_, i) => boardValues.max[i] != null && boardValues.min[i] != null && boardValues.numberScores[0][i] != null ? (boardValues.max[i] - boardValues.min[i]) * boardValues.numberScores[0][i] : null);
   const specialSum = Array(4).fill().map((_, i) => boardValues.twoPairs[i] + boardValues.scale[i] + boardValues.poker[i] + boardValues.full[i] + boardValues.yamb[i]);
   let rowIndex = 0;
+  const diceStyles = [_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.dice1, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.dice2, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.dice3, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.dice4, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.dice5, _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.dice6];
   return __jsx("div", {
     className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.tableContainer,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198,
+      lineNumber: 206,
       columnNumber: 5
     }
   }, __jsx("table", {
@@ -306,35 +307,35 @@ const Board = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 199,
+      lineNumber: 207,
       columnNumber: 7
     }
   }, __jsx("tbody", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200,
+      lineNumber: 208,
       columnNumber: 9
     }
   }, __jsx("tr", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 201,
+      lineNumber: 209,
       columnNumber: 11
     }
   }, __jsx("td", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 202,
+      lineNumber: 210,
       columnNumber: 13
     }
   }), __jsx("td", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 203,
+      lineNumber: 211,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -342,14 +343,14 @@ const Board = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204,
+      lineNumber: 212,
       columnNumber: 15
     }
   }, "\u2B07")), __jsx("td", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206,
+      lineNumber: 214,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -357,14 +358,14 @@ const Board = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 207,
+      lineNumber: 215,
       columnNumber: 15
     }
   }, "\u2B06")), __jsx("td", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209,
+      lineNumber: 217,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -372,14 +373,14 @@ const Board = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210,
+      lineNumber: 218,
       columnNumber: 15
     }
   }, "\u2B07\u2B06")), __jsx("td", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 212,
+      lineNumber: 220,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -387,12 +388,20 @@ const Board = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213,
+      lineNumber: 221,
       columnNumber: 15
     }
   }, "NAJAVA"))), Array(6).fill().map((_, i) => __jsx(ScoreRow, {
     index: rowIndex++,
-    label: i + 1,
+    label: __jsx("div", {
+      className: clsx__WEBPACK_IMPORTED_MODULE_2___default()(_Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.dice, diceStyles[i]),
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 229,
+        columnNumber: 24
+      }
+    }),
     values: boardValues.numberScores[i],
     hintValues: Array(4).fill(numberScores[i]),
     boardState: boardState,
@@ -400,19 +409,18 @@ const Board = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 219,
+      lineNumber: 227,
       columnNumber: 15
     }
   })), __jsx(ScoreRow, {
     disabled: true,
     label: "\u2211",
-    summarize: true,
     className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.sum,
     values: numbersSum,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228,
+      lineNumber: 236,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
@@ -426,7 +434,7 @@ const Board = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235,
+      lineNumber: 242,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
@@ -440,20 +448,19 @@ const Board = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244,
+      lineNumber: 251,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
     disabled: true,
     label: "RAZLIKA X1",
-    summarize: true,
     smallLabel: true,
     className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.sum,
     values: minMaxSum,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 253,
+      lineNumber: 260,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
@@ -467,7 +474,7 @@ const Board = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 261,
+      lineNumber: 267,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
@@ -481,7 +488,7 @@ const Board = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 270,
+      lineNumber: 276,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
@@ -495,7 +502,7 @@ const Board = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 279,
+      lineNumber: 285,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
@@ -509,7 +516,7 @@ const Board = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288,
+      lineNumber: 294,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
@@ -523,19 +530,18 @@ const Board = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 297,
+      lineNumber: 303,
       columnNumber: 11
     }
   }), __jsx(ScoreRow, {
     disabled: true,
     label: "\u2211",
     className: _Board_module_scss__WEBPACK_IMPORTED_MODULE_1___default.a.sum,
-    summarize: true,
     values: specialSum,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 306,
+      lineNumber: 312,
       columnNumber: 11
     }
   }), __jsx("tr", {
@@ -543,35 +549,28 @@ const Board = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 313,
+      lineNumber: 318,
       columnNumber: 11
     }
   }, __jsx("td", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 314,
+      lineNumber: 319,
       columnNumber: 13
     }
   }), __jsx("td", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 315,
+      lineNumber: 320,
       columnNumber: 13
     }
   }), __jsx("td", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 316,
-      columnNumber: 13
-    }
-  }), __jsx("td", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 317,
+      lineNumber: 321,
       columnNumber: 13
     }
   }), __jsx("td", {
@@ -579,7 +578,7 @@ const Board = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 318,
+      lineNumber: 322,
       columnNumber: 13
     }
   }, __jsx("div", {
@@ -587,7 +586,7 @@ const Board = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 319,
+      lineNumber: 323,
       columnNumber: 15
     }
   }, numbersSum.reduce((sum, val) => sum + val, 0) + minMaxSum.reduce((sum, val) => sum + val, 0) + specialSum.reduce((sum, val) => sum + val, 0)))))));
@@ -614,7 +613,14 @@ module.exports = {
 	"selected": "Board_selected__1hRu4",
 	"scoreDisabled": "Board_scoreDisabled__2WxYU",
 	"scoreLarge": "Board_scoreLarge__1z0GB",
-	"sum": "Board_sum__3Cd39"
+	"sum": "Board_sum__3Cd39",
+	"dice": "Board_dice__1hDnr",
+	"dice1": "Board_dice1__qJXDI",
+	"dice2": "Board_dice2__z7rWp",
+	"dice3": "Board_dice3__3YlGe",
+	"dice4": "Board_dice4__30xjx",
+	"dice5": "Board_dice5__1QMNN",
+	"dice6": "Board_dice6__1Tekh"
 };
 
 /***/ }),
@@ -760,7 +766,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 const Dice = props => {
   const {
     value,
-    isSelected
+    isSelected,
+    isRolling
   } = props;
   let diceValueStyle = _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceValue0;
 
@@ -793,20 +800,21 @@ const Dice = props => {
       break;
   }
 
+  const rollingStyle = _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a[`rollingStyle${Math.floor(Math.random() * 4)}`];
   return __jsx("div", {
     className: clsx__WEBPACK_IMPORTED_MODULE_1___default()(isSelected && _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.selected, _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.selectionContainer),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33,
+      lineNumber: 35,
       columnNumber: 5
     }
   }, __jsx("div", {
-    className: clsx__WEBPACK_IMPORTED_MODULE_1___default()(_Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.root, diceValueStyle, _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceValue),
+    className: clsx__WEBPACK_IMPORTED_MODULE_1___default()(_Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.root, _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.diceValue, diceValueStyle, !isSelected && isRolling && _Dice_module_scss__WEBPACK_IMPORTED_MODULE_2___default.a.rolling, !isSelected && isRolling && rollingStyle),
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
+      lineNumber: 38,
       columnNumber: 7
     }
   }));
@@ -835,7 +843,19 @@ module.exports = {
 	"diceValue4": "Dice_diceValue4__2PGHg",
 	"diceValue5": "Dice_diceValue5__2Y23A",
 	"diceValue6": "Dice_diceValue6__2NtPW",
-	"diceValue": "Dice_diceValue__V4uRP"
+	"diceValue": "Dice_diceValue__V4uRP",
+	"rollingStyle0": "Dice_rollingStyle0__9wK1t",
+	"enlarge": "Dice_enlarge__1Cyku",
+	"shake1": "Dice_shake1__1P9T9",
+	"pulse0": "Dice_pulse0__1wKaT",
+	"rollingStyle1": "Dice_rollingStyle1__1lA36",
+	"pulse1": "Dice_pulse1__1VB4S",
+	"rollingStyle2": "Dice_rollingStyle2__2nahU",
+	"shake2": "Dice_shake2__2kmhQ",
+	"pulse2": "Dice_pulse2__2Qrw0",
+	"rollingStyle3": "Dice_rollingStyle3__2ZXFj",
+	"pulse3": "Dice_pulse3__rJc6z",
+	"rolling": "Dice_rolling__1ZreS"
 };
 
 /***/ }),
@@ -866,6 +886,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+let roll1 = null;
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
@@ -923,9 +944,10 @@ const DiceSet = props => {
     }
 
     setRound(currentRound);
-  });
+  }, [currentRound]);
 
   const handleDiceClick = i => {
+    if (diceValues[i].value <= 0) return;
     diceValues[i].isSelected = !diceValues[i].isSelected;
     setDiceValues([...diceValues]);
   };
@@ -938,9 +960,19 @@ const DiceSet = props => {
     }
 
     setDiceValues([...diceValues]);
-    onDiceValueChange(diceValues.map(d => d.value));
+    onDiceValueChange(diceValues.map(d => d.value)); // Roll dice
+
+    setIsRolling(true);
+    setTimeout(() => setIsRolling(false), 400); // Play sound
+
+    if (roll1 == null) roll1 = new Audio("/static/roll1.mp3");
+    roll1.play();
   };
 
+  const {
+    0: isRolling,
+    1: setIsRolling
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   return __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
     container: true,
     direction: "column",
@@ -948,7 +980,7 @@ const DiceSet = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74,
+      lineNumber: 87,
       columnNumber: 5
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
@@ -956,7 +988,7 @@ const DiceSet = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75,
+      lineNumber: 88,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
@@ -964,10 +996,11 @@ const DiceSet = props => {
     direction: "column",
     alignItems: "center",
     justify: "flex-start",
+    spacing: 1,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76,
+      lineNumber: 89,
       columnNumber: 9
     }
   }, diceValues.map((diceValue, i) => __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
@@ -976,17 +1009,18 @@ const DiceSet = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83,
+      lineNumber: 97,
       columnNumber: 13
     }
   }, __jsx(_Dice_Dice__WEBPACK_IMPORTED_MODULE_1__["default"], {
     key: "dice" + i,
     value: diceValue.value,
     isSelected: diceValue.isSelected,
+    isRolling: isRolling,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84,
+      lineNumber: 98,
       columnNumber: 15
     }
   }))))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
@@ -994,7 +1028,7 @@ const DiceSet = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93,
+      lineNumber: 108,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
@@ -1003,7 +1037,7 @@ const DiceSet = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94,
+      lineNumber: 109,
       columnNumber: 9
     }
   }, Array(3).fill(1).map((item, i) => __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
@@ -1011,7 +1045,7 @@ const DiceSet = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98,
+      lineNumber: 113,
       columnNumber: 15
     }
   }, __jsx("span", {
@@ -1019,7 +1053,7 @@ const DiceSet = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99,
+      lineNumber: 114,
       columnNumber: 17
     }
   }, i + 1))))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Grid"], {
@@ -1027,7 +1061,7 @@ const DiceSet = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111,
+      lineNumber: 126,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["Button"], {
@@ -1038,7 +1072,7 @@ const DiceSet = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112,
+      lineNumber: 127,
       columnNumber: 9
     }
   }, __jsx("img", {
@@ -1048,7 +1082,7 @@ const DiceSet = props => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118,
+      lineNumber: 133,
       columnNumber: 11
     }
   }))));
@@ -1173,10 +1207,20 @@ const Index = () => {
     }));
   };
 
+  let oldBoardValue = null;
+  const localStorageBoardValue = window.localStorage && window.localStorage.getItem("boardData", boardValues);
+
+  if (localStorageBoardValue) {
+    try {
+      oldBoardValue = JSON.parse(localStorageBoardValue);
+      if (!(oldBoardValue && typeof oldBoardValue.round === "number")) oldBoardValue = null;
+    } catch {}
+  }
+
   const {
     0: boardValues,
     1: setBoardValues
-  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(oldBoardValue || {
     numberScores: [[null, null, null, null], [null, null, null, null], [null, null, null, null], [null, null, null, null], [null, null, null, null], [null, null, null, null]],
     min: [null, null, null, null],
     max: [null, null, null, null],
@@ -1214,19 +1258,22 @@ const Index = () => {
     }
   };
 
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    window.localStorage != null && window.localStorage.setItem("boardData", JSON.stringify(boardValues));
+  }, [boardValues]);
   return __jsx("div", {
     className: _index_module_scss__WEBPACK_IMPORTED_MODULE_6___default.a.root,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122,
+      lineNumber: 140,
       columnNumber: 5
     }
   }, __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125,
+      lineNumber: 143,
       columnNumber: 7
     }
   }), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
@@ -1235,7 +1282,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128,
+      lineNumber: 146,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
@@ -1243,7 +1290,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129,
+      lineNumber: 147,
       columnNumber: 9
     }
   }, __jsx(_components_Board_Board__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -1252,7 +1299,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130,
+      lineNumber: 148,
       columnNumber: 11
     }
   })), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_5__["Grid"], {
@@ -1260,7 +1307,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135,
+      lineNumber: 153,
       columnNumber: 9
     }
   }, __jsx(_components_DiceSet_DiceSet__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -1270,7 +1317,7 @@ const Index = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136,
+      lineNumber: 154,
       columnNumber: 11
     }
   }))));
@@ -1287,10 +1334,7 @@ const Index = () => {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// Exports
-module.exports = {
-	"root": "index_root__1BJ3w"
-};
+
 
 /***/ }),
 

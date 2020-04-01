@@ -1100,7 +1100,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 13,
-        columnNumber: 9
+        columnNumber: 11
       }
     })), __jsx("body", {
       __self: this,

@@ -1,3 +1,5 @@
+$cellSize: 34px;
+
 .tableContainer {
   padding: 4px;
   display: inline-block;
@@ -5,8 +7,9 @@
 
 .jambTable {
   td {
-    width: 34px;
-    height: 34px;
+    width: $cellSize;
+    height: $cellSize;
+    user-select: none;
   }
 
   .score {
@@ -45,4 +48,30 @@
   tr.sum td .score {
     background-color: hsl(0, 100%, 88%);
   }
+}
+
+.dice {
+  background-size: $cellSize $cellSize;
+  background-repeat: no-repeat;
+  width: $cellSize;
+  height: $cellSize;
+  display: inline-block;
+}
+.dice1 {
+  background-image: url("/static/one.png");
+}
+.dice2 {
+  background-image: url("/static/two.png");
+}
+.dice3 {
+  background-image: url("/static/three.png");
+}
+.dice4 {
+  background-image: url("/static/four.png");
+}
+.dice5 {
+  background-image: url("/static/five.png");
+}
+.dice6 {
+  background-image: url("/static/six.png");
 }

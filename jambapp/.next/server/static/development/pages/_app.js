@@ -122,6 +122,10 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
+if (true) {
+  global.window = {};
+}
+
 function MyApp({
   Component,
   pageProps
@@ -130,23 +134,23 @@ function MyApp({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 13,
       columnNumber: 7
     }
   }, __jsx("title", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 14,
       columnNumber: 9
     }
-  }, "My page"), __jsx("meta", {
+  }, "Jamb"), __jsx("meta", {
     name: "viewport",
     content: "minimum-scale=1, initial-scale=1, width=device-width",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
+      lineNumber: 15,
       columnNumber: 9
     }
   })), __jsx(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_3__["ThemeProvider"], {
@@ -154,21 +158,21 @@ function MyApp({
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 20,
       columnNumber: 7
     }
   }, __jsx(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 21,
       columnNumber: 9
     }
   }), __jsx(Component, _extends({}, pageProps, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
+      lineNumber: 22,
       columnNumber: 9
     }
   }))));
@@ -208,16 +212,16 @@ __webpack_require__.r(__webpack_exports__);
 const theme = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_0__["createMuiTheme"])({
   palette: {
     primary: {
-      main: '#556cd6'
+      main: "#556cd6"
     },
     secondary: {
-      main: '#19857b'
+      main: "#19857b"
     },
     error: {
       main: _material_ui_core_colors__WEBPACK_IMPORTED_MODULE_1__["red"].A400
     },
     background: {
-      default: '#fff'
+      default: "#ff5148"
     }
   }
 });

@@ -73,29 +73,42 @@ const Index = () => {
     });
   };
 
-  const [boardValues, setBoardValues] = useState({
-    numberScores: [
-      [null, null, null, null],
-      [null, null, null, null],
-      [null, null, null, null],
-      [null, null, null, null],
-      [null, null, null, null],
-      [null, null, null, null]
-    ],
-    min: [null, null, null, null],
-    max: [null, null, null, null],
-    twoPairs: [null, null, null, null],
-    scale: [null, null, null, null],
-    full: [null, null, null, null],
-    poker: [null, null, null, null],
-    yamb: [null, null, null, null],
-    downIndex: 0,
-    upIndex: 12,
-    announcementIndex: null,
-    round: 0,
-    throwIndex: 0,
-    diceValues: [0, 0, 0, 0, 0]
-  });
+  let oldBoardValue = null;
+  const localStorageBoardValue =
+    window.localStorage &&
+    window.localStorage.getItem("boardData", boardValues);
+  if (localStorageBoardValue) {
+    try {
+      oldBoardValue = JSON.parse(localStorageBoardValue);
+      if (!(oldBoardValue && typeof oldBoardValue.round === "number"))
+        oldBoardValue = null;
+    } catch {}
+  }
+  const [boardValues, setBoardValues] = useState(
+    oldBoardValue || {
+      numberScores: [
+        [null, null, null, null],
+        [null, null, null, null],
+        [null, null, null, null],
+        [null, null, null, null],
+        [null, null, null, null],
+        [null, null, null, null]
+      ],
+      min: [null, null, null, null],
+      max: [null, null, null, null],
+      twoPairs: [null, null, null, null],
+      scale: [null, null, null, null],
+      full: [null, null, null, null],
+      poker: [null, null, null, null],
+      yamb: [null, null, null, null],
+      downIndex: 0,
+      upIndex: 12,
+      announcementIndex: null,
+      round: 0,
+      throwIndex: 0,
+      diceValues: [0, 0, 0, 0, 0]
+    }
+  );
   const handleBoardValueSet = (action, newBoardValues) => {
     console.log("Action", action);
     if (action.value != null) {
@@ -117,6 +130,11 @@ const Index = () => {
       console.warning("Ignored user action");
     }
   };
+
+  useEffect(() => {
+    window.localStorage != null &&
+      window.localStorage.setItem("boardData", JSON.stringify(boardValues));
+  }, [boardValues]);
 
   return (
     <div className={styles.root}>

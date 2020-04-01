@@ -3,11 +3,15 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "../src/theme";
 
+if (typeof window === "undefined") {
+  global.window = {};
+}
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>My page</title>
+        <title>Jamb</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"

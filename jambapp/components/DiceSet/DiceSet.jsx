@@ -5,6 +5,8 @@ import cx from "clsx";
 import { Grid, Button } from "@material-ui/core";
 import { useEffect } from "react";
 
+let roll1 = null;
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
@@ -52,9 +54,10 @@ const DiceSet = props => {
       reset();
     }
     setRound(currentRound);
-  });
+  }, [currentRound]);
 
   const handleDiceClick = i => {
+    if (diceValues[i].value <= 0) return;
     diceValues[i].isSelected = !diceValues[i].isSelected;
     setDiceValues([...diceValues]);
   };
@@ -68,7 +71,17 @@ const DiceSet = props => {
 
     setDiceValues([...diceValues]);
     onDiceValueChange(diceValues.map(d => d.value));
+
+    // Roll dice
+    setIsRolling(true);
+    setTimeout(() => setIsRolling(false), 400);
+
+    // Play sound
+    if (roll1 == null) roll1 = new Audio("/static/roll1.mp3");
+    roll1.play();
   };
+
+  const [isRolling, setIsRolling] = useState(false);
 
   return (
     <Grid container direction="column" spacing={2}>
@@ -78,6 +91,7 @@ const DiceSet = props => {
           direction="column"
           alignItems="center"
           justify="flex-start"
+          spacing={1}
         >
           {diceValues.map((diceValue, i) => (
             <Grid item onClick={() => handleDiceClick(i)}>
@@ -85,6 +99,7 @@ const DiceSet = props => {
                 key={"dice" + i}
                 value={diceValue.value}
                 isSelected={diceValue.isSelected}
+                isRolling={isRolling}
               />
             </Grid>
           ))}
