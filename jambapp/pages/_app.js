@@ -2,10 +2,13 @@ import Head from "next/head";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "../src/theme";
+import * as gtag from "../src/gtag";
 
 if (typeof window === "undefined") {
   global.window = {};
 }
+
+Router.events.on("routeChangeComplete", (url) => gtag.pageview(url));
 
 function MyApp({ Component, pageProps }) {
   return (
