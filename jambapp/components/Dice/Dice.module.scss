@@ -18,25 +18,25 @@ $diceSize: 50px;
 }
 
 .diceValue0 {
-  background-image: url("/static/none.png");
+  background-image: url("/none.png");
 }
 .diceValue1 {
-  background-image: url("/static/one.png");
+  background-image: url("/one.png");
 }
 .diceValue2 {
-  background-image: url("/static/two.png");
+  background-image: url("/two.png");
 }
 .diceValue3 {
-  background-image: url("/static/three.png");
+  background-image: url("/three.png");
 }
 .diceValue4 {
-  background-image: url("/static/four.png");
+  background-image: url("/four.png");
 }
 .diceValue5 {
-  background-image: url("/static/five.png");
+  background-image: url("/five.png");
 }
 .diceValue6 {
-  background-image: url("/static/six.png");
+  background-image: url("/six.png");
 }
 
 .diceValue {
@@ -105,73 +105,73 @@ $shakeMagnitude: 2px;
 
 @keyframes pulse0 {
   from {
-    background-image: url("/static/one.png");
+    background-image: url("/one.png");
   }
   20% {
-    background-image: url("/static/five.png");
+    background-image: url("/five.png");
   }
   40% {
-    background-image: url("/static/six.png");
+    background-image: url("/six.png");
   }
   70% {
-    background-image: url("/static/five.png");
+    background-image: url("/five.png");
   }
   to {
-    background-image: url("/static/six.png");
+    background-image: url("/six.png");
   }
 }
 
 @keyframes pulse1 {
   from {
-    background-image: url("/static/two.png");
+    background-image: url("/two.png");
   }
   10% {
-    background-image: url("/static/three.png");
+    background-image: url("/three.png");
   }
   30% {
-    background-image: url("/static/four.png");
+    background-image: url("/four.png");
   }
   50% {
-    background-image: url("/static/one.png");
+    background-image: url("/one.png");
   }
   to {
-    background-image: url("/static/one.png");
+    background-image: url("/one.png");
   }
 }
 
 @keyframes pulse2 {
   from {
-    background-image: url("/static/five.png");
+    background-image: url("/five.png");
   }
   20% {
-    background-image: url("/static/one.png");
+    background-image: url("/one.png");
   }
   40% {
-    background-image: url("/static/four.png");
+    background-image: url("/four.png");
   }
   60% {
-    background-image: url("/static/five.png");
+    background-image: url("/five.png");
   }
   to {
-    background-image: url("/static/three.png");
+    background-image: url("/three.png");
   }
 }
 
 @keyframes pulse3 {
   from {
-    background-image: url("/static/three.png");
+    background-image: url("/three.png");
   }
   20% {
-    background-image: url("/static/six.png");
+    background-image: url("/six.png");
   }
   40% {
-    background-image: url("/static/four.png");
+    background-image: url("/four.png");
   }
   70% {
-    background-image: url("/static/five.png");
+    background-image: url("/five.png");
   }
   to {
-    background-image: url("/static/two.png");
+    background-image: url("/two.png");
   }
 }
 

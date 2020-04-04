@@ -11,29 +11,29 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-const DiceSet = props => {
+const DiceSet = (props) => {
   const { currentRound, throwIndex, onDiceValueChange } = props;
   const [diceValues, setDiceValues] = useState([
     {
       value: 0,
-      isSelected: false
+      isSelected: false,
     },
     {
       value: 0,
-      isSelected: false
+      isSelected: false,
     },
     {
       value: 0,
-      isSelected: false
+      isSelected: false,
     },
     {
       value: 0,
-      isSelected: false
+      isSelected: false,
     },
     {
       value: 0,
-      isSelected: false
-    }
+      isSelected: false,
+    },
   ]);
 
   const [canThrow, setCanThrow] = useState(true);
@@ -56,7 +56,7 @@ const DiceSet = props => {
     setRound(currentRound);
   }, [currentRound]);
 
-  const handleDiceClick = i => {
+  const handleDiceClick = (i) => {
     if (diceValues[i].value <= 0) return;
     diceValues[i].isSelected = !diceValues[i].isSelected;
     setDiceValues([...diceValues]);
@@ -70,14 +70,14 @@ const DiceSet = props => {
     }
 
     setDiceValues([...diceValues]);
-    onDiceValueChange(diceValues.map(d => d.value));
+    onDiceValueChange(diceValues.map((d) => d.value));
 
     // Roll dice
     setIsRolling(true);
     setTimeout(() => setIsRolling(false), 400);
 
     // Play sound
-    if (roll1 == null) roll1 = new Audio("/static/roll1.mp3");
+    if (roll1 == null) roll1 = new Audio("/roll1.mp3");
     roll1.play();
   };
 
@@ -130,7 +130,7 @@ const DiceSet = props => {
           onClick={handleThrow}
           disabled={!canThrow}
         >
-          <img src="/static/throw.png" width={30} height={30} />
+          <img src="/throw.png" width={30} height={30} />
         </Button>
       </Grid>
     </Grid>
